@@ -32,6 +32,7 @@ function setInnerHtmlValue(printElementId, inputElementId) {
 const os = document.querySelector("#botao");
 const btn = document.querySelector("#botao");
 
+
 os.addEventListener('click', function() {
     event.preventDefault();
     const printElements = [
@@ -49,6 +50,7 @@ os.addEventListener('click', function() {
         const inputElement = document.getElementById(printElements[i].inputElementId);
         printElement.innerHTML = inputElement.value;
     }
+    
 });
 
 btn.addEventListener('click', function() {
@@ -64,3 +66,37 @@ function setInnerHtmlValue(printElementId, inputElementId) {
     const inputElement = document.getElementById(inputElementId);
     printElement.innerHTML = inputElement.value;
 }
+
+//selecionando o id do botao pra pegar o click
+var botao = document.getElementById("botao")
+
+//Adicionando eventlsitener(pegar evento no caso aqui o de clique )
+botao.addEventListener("click",inserirTexto);
+
+function inserirTexto() {
+    var texto = "";
+    texto += "PLANO: " + document.getElementById("plano_print").innerText + "\n";
+    texto += "VENCIMENTO: " + document.getElementById("vencimento_print").innerText + "\n";
+    texto += "VALOR TAXA: R$" + document.getElementById("valortaxa_print").innerText + "\n";
+    texto += "MODO DE PAGAMENTO: " + document.getElementById("modopagamento_print").innerText + "\n";
+    texto += "PONTOS DE REFERÊNCIA: " + document.getElementById("endereco_print").innerText + "\n";
+    texto += "CONTATOS DO CLIENTE: " + document.getElementById("contato_print").innerText + "\n";
+    texto += "CONTATOS(2) DO CLIENTE: " + document.getElementById("contato2_print").innerText + "\n";
+    texto += "DATA DO AGENDAMENTO: " + document.getElementById("agendamento_print").innerText + "\n";
+    texto += "DESEJA OU NÃO ANTECIPAR: " + document.getElementById("antecipar_print").innerText;
+
+    document.getElementById("texto_area").value = texto;
+}
+
+//BOTÃO DE COPIA DECLARAÇÃO 
+var copiar = document.getElementById("copiador")
+//Pegando evento 
+copiar.addEventListener("click",copiarTexto);
+
+function  copiarTexto(){
+    let textoCopiado = document.getElementById("texto_area");
+        textoCopiado.select();
+        textoCopiado.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        alert("Control + V Efetuado : \n" + textoCopiado.value);
+    }

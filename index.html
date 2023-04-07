@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     <header class="titulo">
         <div class="menu__container">
             <h1 class="titulo__principal">Gerador de O.s Alfa</h1>
@@ -32,12 +33,15 @@
             </nav>
         </div>
        
-    </header><br>
+    </header>
+
+
+    <br>
         <form action="" id="form">
             <fieldset class="grupo">
                 <div class="select__valortaxa">
                     <label for="valortaxa">Valor da Taxa</label>
-                    <input type="text" name="valortaxa" id="valortaxa" placeholder="  R$">
+                    <input type="text" name="valortaxa" id="valortaxa" placeholder="R$"></input>
                 </div>
                 
                 
@@ -51,13 +55,7 @@
                     </select>
                 </div>
 
-                <div class="contato">
-                    <label for="contato">Contato</label>
-                    <input type="tel" name="contato" id="contato" placeholder=" (21)12345-6789)">
-                    <label for="contato2"></label>
-                    <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789)">
-                </div>
-
+                
                 <div class="select__modopagamento">
                     <label for="modopagamento">Modo de Pagamento</label>
                     <select id="modopagamento">
@@ -91,28 +89,50 @@
                     </select>
                 </div>
 
-                <div class="agendamento">
+                <div class="select__agendamento">
                     <label for="date"><strong>Data de Agendamento</strong></label>
                     <input type="date" id="agendamento"></input>
-                </div><br>
+                </div>
+                <div class="contato">
+                    <label for="contato">Contato</label>
+                    <input type="tel" name="contato" id="contato" placeholder=" (21)12345-6789">
+                    <label for="contato2"></label>
+                    <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789">
+                </div>
 
                 
 
 
                 <div class="endereco">
-                    <label>Endereço ePonto de referência</label><br>
-                    <textarea rows="5" style="width: 220%;" type="text" class="textarea" id="endereco"></textarea><br>
+                    <label>Endereço e Ponto de referência</label><br>
+                    <textarea rows="2" style="width: 220%;" type="text" class="textarea" id="endereco"></textarea><br>
                     <button id="botao" class="botao">Criar</button>
                 </div>
                 
             </fieldset>
 
-
+            <fieldset id="mascara">
+                <div class="print">
+                    
+                    <p>PLANO: <span id="plano_print"></span> </p>
+                    <p >VENCIMENTO: <span id="vencimento_print"></span> </p>
+                    <p >VALOR TAXA: R$<span id="valortaxa_print"></span> </p>
+                    <p>MODO DE PAGAMENTO: <span id="modopagamento_print"></span></p>
+                    <p>PONTOS DE REFERÊNCIA:<span id="endereco_print"></span></p>
+                    <p>CONTATOS DO CLIENTE:<span id="contato_print"></span></p>
+                    <p>CONTATOS(2) DO CLIENTE:<span id="contato2_print"></span><br></p>
+                    <p>DATA DO AGENDAMENTO:<span id="agendamento_print"></span> <br>
+                    <p>DESEJA OU NÃO ANTECIPAR:<span id="antecipar_print"></span></p>
+                </div>
+    
+                <textarea id="texto_area" rows="10" ></textarea>
+                <button id="copiador" class="botao">Finalizar</button>
+            </fieldset>
 
         </form>
 
 
-        <fieldset id=mascara>
+        <!--<fieldset id=mascara>
             <div class="print">
                 <p>PLANO: <span id="plano_print"></span> </p>
                 <p>VENCIMENTO: <span id="vencimento_print"> </p>
@@ -126,11 +146,11 @@
                 <p>DESEJA OU NÃO ANTECIPAR:<span id="antecipar_print"></span></label></p>
             </div>
             
-        </fieldset>
+        </fieldset>-->
+        
         
 
-
         <script src="form.js"></script>
-</body>
+    </body>
 
 </html>

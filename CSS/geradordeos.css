@@ -1,134 +1,155 @@
-:root{
-    --roxo-escuro:#11001d;
-    --roxo-claro:#b6a0ca;
-    --roxo-normal:#59429d;
-    --branco:#e0e0f8;
+:root {
+    --branco: #ffffff;
+    --roxo-claro: #184c72;
+    --roxo-normal: #63d391;
+    --branco: #e0e0f8;
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
+}
+
+/*Formulario com respectivas informações a serem preenchidas*/
+form {
+    margin-top: 4em;
+    margin-right: -7em;
+    float: left;
+
 }
 
 
 
-.titulo {
-    width: 100%;
-    height: 5%;
-    background-color: var(--azul-primario);
-  }
-  
-  
-  
-  
-  .titulo .menu__container .menu__navegacao .menu__lista .menu__links {
-      align-items: start;
-      display: flex;
-      padding-right: 10px;
-      justify-content: space-between;
-      float: left;
-      margin-bottom: 5px;
 
-    }
-  
-    .titulo .menu__navegacao .menu__lista .menu__links .menu__link{
-      display: block;
-      color:white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      border-radius: 2em;
-    }
-    
-    .titulo .menu__navegacao .menu__lista {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-  
-    .titulo .menu__navegacao .menu__lista .menu__links .menu__link:hover{
-      background-color:var(--roxo-normal);
-      
-       box-shadow: unset  2px 2px 2px  ;
-     }
-
-     .menu__selected{
-        background-color:var(--roxo-normal);
-        color:var(--branco);
-        
-       box-shadow:unset var(--roxo-claro) 3px 3px 2px ;
-       border-radius: 2em;
-       padding: 14px 16px;
-     }
-
-
-
-
-
-
-
-
-
-
-
-
-fieldset {
-    border:0;
-    
-}
-body{
-    background-color :var(--roxo-escuro);
+/*Corpo do stie */
+body {
+    background-color: var(--branco);
     font-family: 'Montserrat', sans-serif;
-    font-size : 1em ;
+    font-size: 1em;
     color: #b6a0ca;
-    margin-left: 5%;
-    margin-top: 2% ;
-    justify-content:center;
+    margin-left: 2%;
+    margin-top: 2%;
+    justify-content: left;
+    display: inline-flex;
+
+}
+p{
+    display: none;
 }
 
-input,select,textarea,button{
-    border-color: #59429d;
-    border-width: 4px;
-    border-radius: 1em;
+/*Digitação padrão em uppercase para preenchimento*/
+input,
+textarea,select {
+    text-transform: uppercase !important;
+    font-family: "Montserrat",sans-serif;
+    font-weight:500;
+}
+
+/*Retirando as bordas do Fieldset*/
+fieldset {
+    border: 0;
+;
+}
+
+/*Cor das respectivas bordas dos objetos do formulário*/
+input,select,textarea,button,option {
+    border-color: var(--roxo-claro);
+    border-width: 2px;
+    border-radius: 0.7em;
     display: flex;
+    margin-bottom: 1em;
     
-    
-    
+}
+P{
+    display: noen;
+}
+.grupo .select__valortaxa,.select__antecipar,.select__plano,.select__agendamento,.select__vencimento{
+    float:left;
+    margin-right: 2em;
     
 }
 
 
+/*Prorpiedadas de estilização para area onde o texto é preenchido */
 
-
-input,textarea{
-    text-transform:uppercase !important ;
-    
+#texto_area {
+    float: inline-end;
+    width: 45em;
+    margin-bottom: 1%;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: black;
 }
-    
+
+/*Propriedades de estilização de cada objeto do menu*/
+.titulo .menu__container .menu__navegacao .menu__lista .menu__links {
+    align-items: center;
+    display: flex;
+    padding-right: 12px;
+    justify-content: space-between;
+    float: inline;
+
+}
+
+/*Propriedades de estlização de cada link do menu */
+.titulo .menu__navegacao .menu__lista .menu__links .menu__link {
+    display: block;
+    color:var(--roxo-claro) ;
+    text-align: center;
+    margin-top: 1%;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 2em;
+}
+
+/*Propriedade de estilização da lista do menu */
+.titulo .menu__navegacao .menu__lista {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline;
+
+}
+/*Estilização do Link Atual da Página*/
+.menu__selected {
+    background-color: var(--roxo-normal);
+    color: var(--roxo-claro);
+
+    box-shadow: unset var(--roxo-claro) 3px 3px 2px;
+    border-radius: 2em;
+    padding: 14px 16px;
+}
+/*Propriedades de estilização quando há a passagem do mouse por cima do link*/
+.titulo .menu__navegacao .menu__lista .menu__links .menu__link:hover {
+    background-color: var(--roxo-normal);
+
+    box-shadow: unset 2px 2px 2px;
+}
 
 
+
+/*Estilização do Titulo e Subtitulo da Pagina*/
 .titulo,.titulo__principal,.titulo__secundario {
     color: var(--roxo-claro);
-    margin-left: 0%;
-    margin-bottom: 0.5%;
+    display: flow-root;
+    margin-bottom: 10%;
     font-weight: bold;
-}
-.grupo select {
-    padding: 0.2%;
+
+
 }
 
-.grupo .select__antecipar{
-    float: left;
-    margin-right: 2%;
-}
 
-.grupo .select__valortaxa, .select__modopagamento ,.select__vencimento{
-    float:left;
-    padding-right: 5% ;
+/*Estilização do Textarea onde é printado a O.s*/
+#mascara {
+    margin-top: 1%;
+    font-size: 15px;
+    font-weight: bold;
+    top: 10%;
+    padding: 11px;
 }
 
 
@@ -139,54 +160,64 @@ input,textarea{
 
 
 
-.grupo:before, .grupo::after{
-    display:table;
+.grupo:before,
+.grupo::after {
+    display: table;
 }
 
-.grupo::after{
+.grupo::after {
     clear: both;
-    
+
 }
 
-.grupo input:focus, .campo select:focus , .campo textarea:focus {
+.grupo input:focus,
+.campo select:focus,
+.campo textarea:focus {
     background: #e0e0f8;
-    
-}
-
-
-.endereco{
-    float:left;
-    
-    
 
 }
-.botao{
-    font-size:2em;
+
+
+.endereco {
+    float: left;
+
+
+
+}
+
+.botao,.copiador {
+    font-size: 2em;
+    font-family: "Montserrat",sans-serif;
+    font-weight: bold;
     background: var(--roxo-normal);
-    border:2px solid var(--roxo-normal);
+    border: 2px solid var(--roxo-normal);
     border-radius: 3em;
     color: #ffffff;
     padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     display: flex;
 }
 
-.botao:hover{
+.botao:hover {
     background: var(--roxo-claro);
-    box-shadow: inset 2px 2px 2px rgba(0,0,0, 00.2em) ;
-    text-shadow:none;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 00.2em);
+    text-shadow: none;
 
 }
 
-.botao, select{
+.botao,
+select {
     cursor: pointer;
 }
 
-#mascara {
-    margin-top: 5%;
-    font-size: 15px;
-    font-weight:bold;
-    top: 10%;
 
-}
+
+
+
+
+
+
+
+
+

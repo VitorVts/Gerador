@@ -1,6 +1,6 @@
 
 
-checkbox
+
 <fieldset class="grupo">
             <label> Selecione as tecnologias que utiliza :</label><br>
             <div id="check">
