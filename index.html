@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/geradordeos.css" media="screen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap">
+    <link rel="stylesheet" href="CSS/menu.css">
+    <title>O.s Generator Alfa</title>
+</head>
+
+<body>
+    <header class="titulo">
+        <div class="menu__container">
+            <h1 class="titulo__principal">Gerador de O.s Alfa</h1>
+        
+            <nav class="menu__navegacao">
+            <ul class="menu__lista">
+                <li class="menu__links" >
+                    <a class="menu__selected">Adesão</a>
+                </li>
+                <li class="menu__links">
+                    <a class="menu__link">Suporte</a>
+                </li>
+                <li class="menu__links">
+                    <a class="menu__link">Religação</a>
+                </li>
+            
+            </ul>
+            </nav>
+        </div>
+       
+    </header><br>
+        <form action="" id="form">
+            <fieldset class="grupo">
+                <div class="select__valortaxa">
+                    <label for="valortaxa">Valor da Taxa</label>
+                    <input type="text" name="valortaxa" id="valortaxa" placeholder="  R$">
+                </div>
+                
+                
+
+                <div class="select__antecipar">
+                    <label for="antecipar">Deseja Antecipar</label>
+                    <select id="antecipar">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="(   ) Sim ( X ) Não">Não</option>
+                        <option value="( X ) Sim ( ) Não">Sim</option>
+                    </select>
+                </div>
+
+                <div class="contato">
+                    <label for="contato">Contato</label>
+                    <input type="tel" name="contato" id="contato" placeholder=" (21)12345-6789)">
+                    <label for="contato2"></label>
+                    <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789)">
+                </div>
+
+                <div class="select__modopagamento">
+                    <label for="modopagamento">Modo de Pagamento</label>
+                    <select id="modopagamento">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="( X ) A VISTA    (   )3X  (   )Ação Marketing (  )Isento">A Vista</option>
+                        <option value="(   ) A VISTA    ( X )3X  (   )Ação Marketing">3X</option>
+                        <option value="(   ) A VISTA    (   )3X  ( X )Ação Marketing">Ação de Marketing</option>
+                    </select>
+                </div>
+
+
+                <div class="select__plano">
+                    <label for="plano">Selecione o Plano</label>
+                    <select id="plano">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="( X ) 200MBPS (   ) 40MBPS (  ) 20MBPS">200MB</option>
+                        <option value="(   ) 200MBPS ( X ) 40MBPS (  ) 20MBPS">40MB</option>
+                        <option value="(   ) 200MBPS (   ) 40MBPS ( X ) 20MBPS">20MB</option>
+                    </select>
+                </div>
+
+                
+
+                <div class="select__vencimento">
+                    <label for="vencimento">Data de Vencimento</label>
+                    <select id="vencimento">
+                        <option selected disabled value="">Selecione</option>
+                        <option>Dia 01</option>
+                        <option>Dia 05</option>
+                        <option>Dia 10</option>
+                    </select>
+                </div>
+
+                <div class="agendamento">
+                    <label for="date"><strong>Data de Agendamento</strong></label>
+                    <input type="date" id="agendamento"></input>
+                </div><br>
+
+                
+
+
+                <div class="endereco">
+                    <label>Endereço ePonto de referência</label><br>
+                    <textarea rows="5" style="width: 220%;" type="text" class="textarea" id="endereco"></textarea><br>
+                    <button id="botao" class="botao">Criar</button>
+                </div>
+                
+            </fieldset>
+
+
+
+        </form>
+
+
+        <fieldset id=mascara>
+            <div class="print">
+                <p>PLANO: <span id="plano_print"></span> </p>
+                <p>VENCIMENTO: <span id="vencimento_print"> </p>
+                <p>VALOR TAXA: R$<span id="valortaxa_print"></span>
+                <p>
+                <p>MODO DE PAGAMENTO: <span id="modopagamento_print"></span></p>
+                <p>PONTOS DE REFERÊNCIA:<span id="endereco_print"></span></p>
+                <p>CONTATOS DO CLIENTE:<span id="contato_print"></span></p>
+                <p>CONTATOS(2) DO CLIENTE:<span id="contato2_print"></span><br></p>
+                <p>DATA DO AGENDAMENTO:<span id="agendamento_print"></span> <br>
+                <p>DESEJA OU NÃO ANTECIPAR:<span id="antecipar_print"></span></label></p>
+            </div>
+            
+        </fieldset>
+        
+
+
+        <script src="form.js"></script>
+</body>
+
+</html>

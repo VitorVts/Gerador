@@ -1,0 +1,23 @@
+
+
+checkbox
+<fieldset class="grupo">
+            <label> Selecione as tecnologias que utiliza :</label><br>
+            <div id="check">
+                
+                <input type="checkbox" id="tecnologia1" name="tecnologia1" valor="HTML">
+                <label for="tecnologia1">HTML</label>
+                <input type="checkbox" id="tecnologia2" name="tecnologia2" valor="CSS">
+                <label for="tecnologia1">CSS</label>
+                <input type="checkbox" id="tecnologia3" name="tecnologia3" valor="JavaSctript">
+                <label for="tecnologia3">JavaSctript</label>
+                <input type="checkbox" id="tecnologia4" name="tecnologia4" valor="PHP">
+                <labbel for="tecnologia4">PHP</labbel>
+                <input type="checkbox" id="tecnologia5" name="tecnologia5" valor="C#">
+                <label for="tecnologia5">C#</label>
+                <input type="checkbox" id="tecnologia6" name="tecnologia5" valor="Python">
+                <label for="tecnologia5">Python</label> 
+                <input type="checkbox" id="tecnologia7" name="tecnologia7" valor="Java">
+                <label for="tecnologia7">Java</label>
+            </div>
+        </fieldset>
