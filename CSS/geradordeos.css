@@ -1,8 +1,8 @@
 :root {
     --branco: #ffffff;
-    --roxo-claro: #184c72;
-    --roxo-normal: #63d391;
-    --branco: #e0e0f8;
+    --azul: #184c72;
+    --verde: #63d391;
+    
 }
 
 
@@ -16,23 +16,28 @@
 /*Formulario com respectivas informações a serem preenchidas*/
 form {
     margin-top: 4em;
-    margin-right: -7em;
+    margin-left: 2em;
     float: left;
 
 }
 
 
-
+.grupo{
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    
+}
 
 /*Corpo do stie */
 body {
     background-color: var(--branco);
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
-    color: #b6a0ca;
+    color: var(--verde);
     margin-left: 2%;
     margin-top: 2%;
-    justify-content: left;
+    justify-content: center;
     display: inline-flex;
 
 }
@@ -56,8 +61,8 @@ fieldset {
 
 /*Cor das respectivas bordas dos objetos do formulário*/
 input,select,textarea,button,option {
-    border-color: var(--roxo-claro);
-    border-width: 2px;
+    border-color: var(--azul);
+    border-width: 0.2rem;
     border-radius: 0.7em;
     display: flex;
     margin-bottom: 1em;
@@ -65,11 +70,6 @@ input,select,textarea,button,option {
 }
 P{
     display: noen;
-}
-.grupo .select__valortaxa,.select__antecipar,.select__plano,.select__agendamento,.select__vencimento{
-    float:left;
-    margin-right: 2em;
-    
 }
 
 
@@ -97,7 +97,7 @@ P{
 /*Propriedades de estlização de cada link do menu */
 .titulo .menu__navegacao .menu__lista .menu__links .menu__link {
     display: block;
-    color:var(--roxo-claro) ;
+    color:var(--azul) ;
     text-align: center;
     margin-top: 1%;
     padding: 14px 16px;
@@ -116,16 +116,16 @@ P{
 }
 /*Estilização do Link Atual da Página*/
 .menu__selected {
-    background-color: var(--roxo-normal);
-    color: var(--roxo-claro);
+    background-color: var(--verde);
+    color: var(--azul);
 
-    box-shadow: unset var(--roxo-claro) 3px 3px 2px;
+    box-shadow: unset var(--azul) 3px 3px 2px;
     border-radius: 2em;
     padding: 14px 16px;
 }
 /*Propriedades de estilização quando há a passagem do mouse por cima do link*/
 .titulo .menu__navegacao .menu__lista .menu__links .menu__link:hover {
-    background-color: var(--roxo-normal);
+    background-color: var(--verde);
 
     box-shadow: unset 2px 2px 2px;
 }
@@ -134,7 +134,7 @@ P{
 
 /*Estilização do Titulo e Subtitulo da Pagina*/
 .titulo,.titulo__principal,.titulo__secundario {
-    color: var(--roxo-claro);
+    color: var(--azul);
     display: flow-root;
     margin-bottom: 10%;
     font-weight: bold;
@@ -142,20 +142,21 @@ P{
 
 }
 
-
+.form select,input{
+    padding: 3px;
+}
 /*Estilização do Textarea onde é printado a O.s*/
 #mascara {
     margin-top: 1%;
     font-size: 15px;
     font-weight: bold;
     top: 10%;
-    padding: 11px;
 }
 
 
 .grupo {
     font-weight: bold;
-    color: var(--roxo-normal);
+    color: var(--verde);
 }
 
 
@@ -185,12 +186,12 @@ P{
 
 }
 
-.botao,.copiador {
-    font-size: 2em;
+.botao{
+    font-size: 1.5em;
     font-family: "Montserrat",sans-serif;
     font-weight: bold;
-    background: var(--roxo-normal);
-    border: 2px solid var(--roxo-normal);
+    background: var(--verde);
+    border: 2px solid var(--verde);
     border-radius: 3em;
     color: #ffffff;
     padding: 0.2em 0.6em;
@@ -199,15 +200,23 @@ P{
     display: flex;
 }
 
+#botao{
+margin-top: -1em;
+margin-bottom: 0.3em;
+}
+
+
+
+
 .botao:hover {
-    background: var(--roxo-claro);
+    background: var(--azul);
     box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 00.2em);
     text-shadow: none;
 
 }
 
 .botao,
-select {
+select,input,a{
     cursor: pointer;
 }
 

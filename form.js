@@ -33,7 +33,7 @@ const os = document.querySelector("#botao");
 const btn = document.querySelector("#botao");
 
 
-os.addEventListener('click', function() {
+os.addEventListener('click', function () {
     event.preventDefault();
     const printElements = [
         { printElementId: 'plano_print', inputElementId: 'plano' },
@@ -50,10 +50,10 @@ os.addEventListener('click', function() {
         const inputElement = document.getElementById(printElements[i].inputElementId);
         printElement.innerHTML = inputElement.value;
     }
-    
+
 });
 
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function () {
     const data = document.querySelector("#agendamento");
     const datalida = data.value;
     const datacorreta = datalida.replace(/2023/g, "");
@@ -71,7 +71,7 @@ function setInnerHtmlValue(printElementId, inputElementId) {
 var botao = document.getElementById("botao")
 
 //Adicionando eventlsitener(pegar evento no caso aqui o de clique )
-botao.addEventListener("click",inserirTexto);
+botao.addEventListener("click", inserirTexto);
 
 function inserirTexto() {
     var texto = "";
@@ -91,12 +91,12 @@ function inserirTexto() {
 //BOTÃO DE COPIA DECLARAÇÃO 
 var copiar = document.getElementById("copiador")
 //Pegando evento 
-copiar.addEventListener("click",copiarTexto);
+copiar.addEventListener("click", copiarTexto);
 
-function  copiarTexto(){
+function copiarTexto() {
     let textoCopiado = document.getElementById("texto_area");
-        textoCopiado.select();
-        textoCopiado.setSelectionRange(0, 99999)
-        document.execCommand("copy");
-        alert("Control + V Efetuado : \n" + textoCopiado.value);
-    }
+    textoCopiado.select();
+    textoCopiado.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Control + V Efetuado : \n" + textoCopiado.value);
+}
