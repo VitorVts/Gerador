@@ -10,30 +10,32 @@
     <link rel="stylesheet" href="CSS/menu.css">
     <title>O.s Generator Alfa</title>
 </head>
+<header class="titulo">
+    <div class="tittle">
+        <h1 class="titulo__principal">Gerador de O.s Alfa</h1>
+    </div>
+    <div class="menu__container">
+        
+        <nav class="menu__navegacao">
+            <ul class="menu__lista">
+                <li class="menu__links">
+                    <a class="menu__selected">Adesão</a>
+                </li>
+                <li class="menu__links">
+                    <a class="menu__link">Suporte</a>
+                </li>
+                <li class="menu__links">
+                    <a class="menu__link">Religação</a>
+                </li>
 
+            </ul>
+        </nav>
+    </div>
+
+</header>
 <body>
 
-    <header class="titulo">
-        <div class="menu__container">
-            <h1 class="titulo__principal">Gerador de O.s Alfa</h1>
-
-            <nav class="menu__navegacao">
-                <ul class="menu__lista">
-                    <li class="menu__links">
-                        <a class="menu__selected">Adesão</a>
-                    </li>
-                    <li class="menu__links">
-                        <a class="menu__link">Suporte</a>
-                    </li>
-                    <li class="menu__links">
-                        <a class="menu__link">Religação</a>
-                    </li>
-
-                </ul>
-            </nav>
-        </div>
-
-    </header>
+    
 
     <form action="" class="form">
         <fieldset class="grupo">
@@ -94,11 +96,13 @@
             <div class="contato">
                 <label for="contato">Contato</label>
                 <input type="tel" name="contato" id="contato" placeholder=" (21)12345-6789">
-                <label for="contato2"></label>
-                <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789">
+                
             </div>
 
-
+            <div class="contato">
+                <label for="contato2">Contato(2)</label>
+                <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789">
+            </div>
 
 
 
@@ -125,9 +129,8 @@
             </div>
 
             <textarea id="texto_area" rows="10"></textarea>
-            <button id="copiador" class="botao">Finalizar</button>
         </fieldset>
-
+        <button id="copiador" class="botao">Finalizar</button>
     </form>
 
 
