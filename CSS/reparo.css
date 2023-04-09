@@ -1,0 +1,30 @@
+.form_reparo{
+    
+    padding-top:1rem;
+    background-color: #ddd;
+    float: left;
+    margin-left: -10rem;
+    margin-top: -2rem;
+    
+    
+}
+
+.container__formulario {
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 1em;
+max-width: 600px;
+align-items:flex-end;
+padding-left: 1em;
+
+
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+select,input[type="checkbox"]{
+    margin-top: 5px;
+    padding: 5px;
+}
