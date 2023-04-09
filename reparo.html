@@ -19,7 +19,7 @@
                     <a class="menu__selected">Suporte</a>
                 </li>
                 <li class="menu__links">
-                    <a class="menu__link">Adesão</a>
+                    <a href="index.html"  class="menu__link">Adesão</a>
                 </li>
                 
                 <li class="menu__links">
@@ -99,23 +99,23 @@
             <div class="select__ping">
                 <label for="pingc-core1">Testes Ping</label>
                 <select id="ping-core1" name="ping-core1">
-                    <option value="" disabled selected>Selecione</option>
+                    <option value="" disabled selected>FACEBOOK</option>
                     <option value="   ( X ) OK   (   ) FALHA">OK</option>
                     <option value="   (   ) OK   ( X ) FALHA">Falha</option>
                 </select>
-                <label for="pingc-core2">Testes Ping</label>
+                
                 <select id="ping-core2" name="ping-core2">
                     <option value="" disabled selected>Selecione</option>
                     <option value="   ( X ) OK   (   ) FALHA">OK</option>
                     <option value="   (   ) OK   ( X ) FALHA">Falha</option>
                 </select>
-                <label for="pingc-amazon">Testes Ping</label>
+               
                 <select id="ping-amazon" name="ping-amazon">
                     <option value="" disabled selected>Selecione</option>
                     <option value="   ( X ) OK   (   ) FALHA">OK</option>
                     <option value="   (   ) OK   ( X ) FALHA">Falha</option>
                 </select>
-                <label for="pingc-facebook">Testes Ping</label>
+                
                 <select id="ping-facebook" name="ping-facebook">
                     <option value="" disabled selected>Selecione</option>
                     <option value="   ( X ) OK   (   ) FALHA">OK</option>
@@ -127,21 +127,27 @@
                     <option value="   ( X ) OK   (   ) FALHA">OK</option>
                     <option value="   (   ) OK   ( X ) FALHA">Falha</option>
                 </select>
+                <div>
                 <label for="outrodispositivo">Outro Dispositivo</label>
                 <input type="text" id="outroDispositivo">
+                </div>
             </div>
             <div class="conclusao">
                 <label for="conclusao">Conclusão</label>
-                <textarea name="conclusao" id="conclusao" cols="30" rows="4"></textarea>
+                <textarea name="conclusao" id="conclusao" cols="40" rows="10"></textarea>
 
             </div>
            </div>
         </div>
-        <fieldset id="mascara">
+        </fieldset>
+        <fieldset class="mascara">
             <div class="endereco">
                 <label>Endereço e Ponto de referência</label><br>
                 <textarea rows="2" style="width: 220%;" type="text" class="textarea" id="endereco"></textarea><br>
                 <button id="botao" class="botao">Criar</button>
+            </div>
+            <div class="textoarea">
+            <textarea id="textoarea" rows="30" ></textarea>
             </div>
             <div class="print">
 
@@ -169,10 +175,10 @@
                 <p>DATA DO AGENDAMENTO:<span id="agendamento_print"></span> <br>
                 <p>DESEJA OU NÃO ANTECIPAR:<span id="antecipar_print"></span></p>
             </div>
-
-            <textarea id="texto_area" rows="10"></textarea>
+            <button id="copiador" class="botao">Finalizar</button>
+            
         </fieldset>
-        <button id="copiador" class="botao">Finalizar</button>
+        
    
 
 
