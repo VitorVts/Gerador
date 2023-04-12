@@ -1,9 +1,25 @@
+*
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.group{
+    margin-top: 3em;
+    font-weight:bolder;
+    display: inline-block;
+}
+.group input{
+    width: 10.5;
+
+}
 .group select{
-    margin-top: 0.5em;
-    padding-right:4.3em;
-    padding-top: 0.2em; 
+    
+    width: 11.5em;
+    height: 2em;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+    margin-top: 3px;   
 }
 .container__formulario1{
     grid-column-start: 1;
@@ -12,8 +28,9 @@
    grid-row-end: 3;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   gap: 1em;
+   gap: 0.5em;
    
+padding: 10px;
 }
 .container__formulario2{
     grid-column-start: 1;
@@ -22,7 +39,10 @@
    grid-row-end: 3;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   gap: 1em;
+   gap: 0.5em;
+   
+   
+  padding: 10px;
 }
 .container__formulario3{
     grid-column-start: 1 ;
@@ -31,8 +51,9 @@
     grid-row-end: 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
+    gap: 0.5em;
     
+  padding: 10px;
 }
 .container__formulario4{
 grid-column-start: 1 ;
@@ -41,17 +62,32 @@ grid-row-start: 1;
 grid-row-end: 3;
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-gap: 1em;    
+gap: 0.5em;
+
+  padding: 10px;
+    
 }
     
+.container__texts{
+   display:block;
+   margin-left: 1em;
+   gap: 1em;
+   width: 30EM;
+   margin-top: 3.5em;
+   font-weight:bolder;
+}   
+.container__texts #conclusao,#endereco{
+width: 100%;
+margin-bottom: 3em;
+
+}
+
 
 
 #texto__area{
- border: solid red;
+font-weight: bold;
+ 
  width: 100%;
- height: 20%;
+ height: 29%;
 }
-#conclusao{
-    width: 150%;
-    
-}
+

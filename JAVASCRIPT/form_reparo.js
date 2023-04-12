@@ -33,11 +33,9 @@ const os = document.querySelector(".botao");
 const btn = document.querySelector(".botao");
 
 
-os.addEventListener('click', function () {
+os.addEventListener('click', (event) => {
     event.preventDefault();
     const printElements = [
-        
-        
         { printElementId: 'problema_print', inputElementId: 'problema' },
         { printElementId: 'acesso_print', inputElementId: 'acesso' },
         { printElementId: 'resetOnu_print', inputElementId: 'resetOnu' },
@@ -47,7 +45,7 @@ os.addEventListener('click', function () {
         { printElementId: 'porta_print', inputElementId: 'porta' },
         { printElementId: 'ssid_print', inputElementId: 'ssid' },
         { printElementId: 'senha_print', inputElementId: 'senha' },
-        { printElementId: 'dbmSinal_print', inputElementId: 'dbm' },
+        { printElementId: 'dbmsinal_print', inputElementId: 'dbmsinal' },
         { printElementId: 'trocaFrequencia_print', inputElementId: 'trocaFrequencia' },
         { printElementId: 'testesRealizados_print', inputElementId: 'testesRealizados' },
         { printElementId: 'ping-core1_print', inputElementId: 'ping-core1' },
@@ -59,11 +57,9 @@ os.addEventListener('click', function () {
         { printElementId: 'conclusao_print', inputElementId: 'conclusao' },
         { printElementId: 'endereco_print', inputElementId: 'endereco' },
         { printElementId: 'contato_print', inputElementId: 'contato' },
-        { printElementId: 'contato2_print', inputElementId: 'contato2' },
-       
-        
-
+        { printElementId: 'contato2_print', inputElementId: 'contato2' }
     ];
+    
     for (let i = 0; i < printElements.length; i++) {
         const printElement = document.getElementById(printElements[i].printElementId);
         const inputElement = document.getElementById(printElements[i].inputElementId);
@@ -104,7 +100,7 @@ function inserirTexto() {
     texto += "PORTA" + document.getElementById("porta_print").innerText + "\n";
     texto += "SSID" + document.getElementById("ssid_print").innerText + "\n";
     texto += "SENHA" + document.getElementById("senha_print").innerText + "\n";
-    texto += "WIFI SIGNAL DBm: " + document.getElementById("dbmSinal_Print").innerText + "\n";
+    texto += "WIFI SIGNAL DBm: " + document.getElementById("dbmsinal_print").innerText + "\n";
     texto += "TROCA DE FREQUÊNCIA:" + document.getElementById("trocaFrequencia_print").innerText + "\n";
     texto += "TESTE REALIZADOS:" + document.getElementById("testesRealizados_print").innerText + "\n";
     texto += "PING CORE 1  - " + document.getElementById("ping-core1_print").innerText + "\n";
@@ -123,13 +119,14 @@ function inserirTexto() {
     document.getElementById("texto__area").value = texto;
 }
 
-//BOTÃO DE COPIA DECLARAÇÃO 
+
+
 var copiar = document.getElementById("copiador")
 //Pegando evento 
 copiar.addEventListener("click", copiarTexto);
 
 function copiarTexto() {
-    let textoCopiado = document.getElementById("texto_area");
+    let textoCopiado = document.getElementById("texto__area");
     textoCopiado.select();
     textoCopiado.setSelectionRange(0, 99999)
     document.execCommand("copy");

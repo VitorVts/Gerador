@@ -45,7 +45,7 @@
                 </div>
                 <div class="select__acesso">
                     <label for="acesso">Acesso</label>
-                    <select for="acesso">
+                    <select for="acesso" id="acesso">
                         <option value="" selected disabled>Selecione</option>
                         <option value="(  )CABEADO ( X )WI-FI" >Sim</option>
                         <option value="( X )CABEADO (  )WI-FI" >Não</option>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="select__alarme">
                     <label for="alarme">Verificado Alarmes</label>
-                    <select for="alarme">
+                    <select for="alarme" id="alarme">
                         <option value="" selected>Selecione</option>
                         <option value="Sim" id="naoVerificado">Sim</option>
                         <option value="Não" id="naoVerificado">Não</option>
@@ -75,22 +75,22 @@
             <div class="container__formulario2">
                 <div class="select__porta">
                     <label for="porta">Porta</label>
-                    <input type="text" id="cto" class="form__input">
+                    <input type="text" id="porta" for="porta" class="form__input">
                 </div>
 
 
                 <div class="select__dbm">
                     <label for="dbmsinal">Dbm Wi-fi</label>
-                    <select name="dbmsinal" id="dbm">
+                    <select for="dbmsinal" id="dbmsinal" name="dbmsinal">
                         <option value="" selected disabled>Selecione</option>
                         <option value="BOM 	  ( X )-28 a -53dBm">Bom</option>
                         <option value="IRREGULAR ( X )-54 a -67dBm">Irregular</option>
-                        <option value="RUIM.     (  )-68 a -99dBm">Ruim</option>
+                        <option value="RUIM.     ( X )-68 a -99dBm">Ruim</option>
                     </select>
                 </div>
                 <div class="select__trocaFrequencia">
                     <label for="trocaFrequencia">Troca de Frequencia</label>
-                    <select name="trocaFrequencia" id="trocaFrequencia">
+                    <select for="trocaFrequencia" name="trocaFrequencia" id="trocaFrequencia">
                         <option value="" selected disable>Selecione</option>
                         <option value="( X )SIM  (  )NÃO">Sim</option>
                         <option value="(  )SIM  ( X )NÃO">Não</option>
@@ -102,36 +102,42 @@
 
                 <div class="select_testesRealizados">
                     <label for="testesRealizados">Testes Realiazados</label>
-                    <select>
+                    <select for="testesRealizados"id="testesRealizados" name="testesRealizados">
                         <option value="" selected disabled>Selecione</option>
                         <option value="( X )2.4GHZ   (  )5.0GHZ">2.4Ghz</option>
                         <option value="(  )2.4GHZ   ( X )5.0GHZ">5 Ghz</option>
                     </select>
                     <label for="resetOnu">Reset Onu</label>
-                    <select>
+                    <select for="resetOnu" id="resetOnu" name="resetOnu">
                         <option value="" selected disabled>Selecione</option>
                         <option value="( X )Sim   (  )Não">SIM</option>
                         <option value="(   )Sim   ( X )Não">NÃO</option>
                     </select>
-
+                    <label for="sinalOtico">Sinal Otico</label>
+                    <select for="sinalOtico" id="sinalOtico" name="sinalOtico">
+                        <option value="" selected disabled>Selecione</option>
+                        <option value="( x )OK    (  )LED LOSS   (  )Acima do Padrão:">OK</option>
+                        <option value="(  )OK    ( X )LED LOSS   (  )Acima do Padrão:">LedLoss</option>
+                        <option value="(  )OK    (  )LED LOSS   ( x )Acima do Padrão:">Acima do Padrão</option>
+                    </select>
                 </div>
 
                     <div class="select__ping">
                         <label for="pingc-core1">Testes Ping</label>
-                        <select id="ping-core1" name="ping-core1">
-                            <option value="" disabled selected>FACEBOOK</option>
+                        <select id="ping-core1" name="ping-core1" for="ping-core1">
+                            <option value="" disabled selected>Core 1</option>
                             <option value="   ( X ) OK   (   ) FALHA">OK</option>
                             <option value="   (   ) OK   ( X ) FALHA">Falha</option>
                         </select>
 
-                        <select id="ping-core2" name="ping-core2">
-                            <option value="" disabled selected>Selecione</option>
+                        <select id="ping-core2" name="ping-core2" for ="ping-core2">
+                            <option value="" disabled selected>Core 2</option>
                             <option value="   ( X ) OK   (   ) FALHA">OK</option>
                             <option value="   (   ) OK   ( X ) FALHA">Falha</option>
                         </select>
 
-                        <select id="ping-amazon" name="ping-amazon">
-                            <option value="" disabled selected>Selecione</option>
+                        <select id="ping-amazon" name="ping-amazon" for="ping-amazon">
+                            <option value="" disabled selected>amazon</option>
                             <option value="   ( X ) OK   (   ) FALHA">OK</option>
                             <option value="   (   ) OK   ( X ) FALHA">Falha</option>
                         </select>
@@ -140,13 +146,13 @@
                     </div>
                     <div>
                         <label for="otherpings">Testes Ping</label>
-                        <select id="ping-facebook" name="ping-facebook">
-                            <option value="" disabled selected>Selecione</option>
+                        <select id="ping-facebook" name="ping-facebook" for="ping-facebook">
+                            <option value="" disabled selected>facebook</option>
                             <option value="   ( X ) OK   (   ) FALHA">OK</option>
                             <option value="   (   ) OK   ( X ) FALHA">Falha</option>
                         </select>
-                        <select id="ping-local" name="ping-local">
-                            <option value="" disabled selected>Selecione</option>
+                        <select id="ping-local" name="ping-local" for="ping-local">
+                            <option value="" disabled selected>local</option>
                             <option value="   ( X ) OK   (   ) FALHA">OK</option>
                             <option value="   (   ) OK   ( X ) FALHA">Falha</option>
                         </select>
@@ -170,16 +176,10 @@
                 <input type="date" id="agendamento"></input>
             </div>
             
-            <div class="conclusaotxt">
-            <label for="conclusao">Conclusão</label>
-                    <textarea name="conclusao" id="conclusao" cols="10" rows="10"></textarea>
-            </div>
+           
         </div>
-        <div class="endereco">
-            <label>Endereço e Ponto de referência</label><br>
-            <textarea rows="2" style="width: 295%;" type="text" class="textarea" id="endereco"></textarea><br>
-            <button id="botao" class="botao">Criar</button>
-        </div>
+         
+        
                 </fieldset>
 
 
@@ -195,8 +195,8 @@
             <p>PORTA"<span id="porta_print"></span></p>
             <p>SSID: <span id="ssid_print"></span></p>
             <p>SENHA: <span id="senha_print"></span></p>
-            <p>WIFI SIGNAL DBm: <span id="dbmSinal_Print"></span></p>
-            <p>TROCA DE FREQUÊNCIA: <span id="trocaFrequencia"> </span></p>
+            <p>WIFI SIGNAL DBm: <span id="dbmsinal_print"></span></p>
+            <p>TROCA DE FREQUÊNCIA: <span id="trocaFrequencia_print"> </span></p>
             <p>TESTE REALIZADOS:<span id="testesRealizados_print"></span></p>
             <p>PING CORE 1 - <span id="ping-core1_print"> </span></p>
             <p>PING CORE 2 - <span id="ping-core2_print"></span></p>
@@ -213,9 +213,8 @@
         </div>
 
 
-        <textarea id="texto__area"></textarea>
-        <button id="copiador" class="botao">Finalizar</button>
-
+        
+        
 
 
 
@@ -241,6 +240,26 @@
 
         </fieldset>
     </form>
+    
+    <div class="container__texts">
+        <div class="endereco_reparo">
+            <label>Endereço e Ponto de referência</label><br>
+            <textarea rows="2"  type="text" class="textarea" id="endereco"></textarea>
+            <button id="botao" class="botao">Criar</button>
+        </div>
+    <div class="conclusaotxt">
+        <label for="conclusao">Conclusão</label>
+                <textarea name="conclusao" id="conclusao" cols="10" rows="10"></textarea>
+                <button id="copiador" class="botao">Finalizar</button>
+
+            </div>
+            <label for="texto__area">Preview</label>
+            <textarea id="texto__area"></textarea>
+            
+            </div>
+            </div>
+    
+    
 </body>
 <script src="JAVASCRIPT/form_reparo.js"></script>
 
