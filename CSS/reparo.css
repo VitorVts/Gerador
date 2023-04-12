@@ -1,62 +1,57 @@
-.form_reparo{
-    
-    padding-top:1rem;
-    float: left;
-    
-    margin-top: -4rem;
-    margin-left: -10rem;
-    
-}
-
-p{
-    display: none;
-}
-.container__formulario {
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: 1em;
-max-width: 600px;
-align-items:flex;
-padding-left: 1em;
-
-
-}
-.form-group{
-    display:flex;
-    flex-direction: column;
-}
-
-select,input[type="option"]{
-    margin-top: 0.5rem;
-    padding: 0.2rem;
-}
-.mascara{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 0.5em;
-    max-width: 600px;
-    align-items:flex;
-    padding-left: 7em;
+.group select{
+    margin-top: 0.5em;
+    padding-right:4.3em;
+    padding-top: 0.2em; 
     justify-content: center;
-    margin-top: -3.5rem;
+    align-items: center;   
 }
-
-#textoarea{
- float: right;   
- margin-top: 10em;
- margin-left: -em;
- width: 200%;
-
+.container__formulario1{
+    grid-column-start: 1;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1em;
+   
 }
-
-
-.select__ping{
+.container__formulario2{
+    grid-column-start: 1;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1em;
+}
+.container__formulario3{
+    grid-column-start: 1 ;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
     display: grid;
-    justify-content: left;
-    float: left;
-
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    
 }
+.container__formulario4{
+grid-column-start: 1 ;
+grid-column-end: 4;
+grid-row-start: 1;
+grid-row-end: 3;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1em;    
+}
+    
 
-.conclusao{
+
+#texto__area{
+ border: solid red;
+ width: 100%;
+ height: 20%;
+}
+#conclusao{
+    width: 150%;
     
 }

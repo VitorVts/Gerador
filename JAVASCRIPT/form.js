@@ -30,7 +30,6 @@ function setInnerHtmlValue(printElementId, inputElementId) {
 
 */
 const os = document.querySelector("#botao");
-const btn = document.querySelector("#botao");
 
 
 os.addEventListener('click', function () {
@@ -45,32 +44,7 @@ os.addEventListener('click', function () {
         { printElementId: 'contato_print', inputElementId: 'contato' },
         { printElementId: 'contato2_print', inputElementId: 'contato2' },
         { printElementId: 'antecipar_print', inputElementId: 'antecipar' },
-        //reparo
-        { printElementId: 'problema_print', inputElementId: 'problema' },
-        { printElementId: 'acesso_print', inputElementId: 'acesso' },
-        { printElementId: 'resetonu_print', inputElementId: 'resetonu' },
-        { printElementId: 'alarme_print', inputElementId: 'alarme' },
-        { printElementId: 'sinalOtico_print', inputElementId: 'sinalOtico' },
-        { printElementId: 'cto_print', inputElementId: 'cto' },
-        { printElementId: 'porta_print', inputElementId: 'porta' },
-        { printElementId: 'ssid_print', inputElementId: 'ssid' },
-        { printElementId: 'senha_print', inputElementId: 'senha' },
-        { printElementId: 'dbmSinal_print', inputElementId: 'dbmSinal' },
-        { printElementId: 'trocaFrequencia_print', inputElementId: 'trocaFrequencia' },
-        { printElementId: 'testesRealizados_print', inputElementId: 'testesRealizados' },
-        { printElementId: 'ping-core1_print', inputElementId: 'ping-core1' },
-        { printElementId: 'ping-core2_print', inputElementId: 'ping-core2' },
-        { printElementId: 'ping-amazon_print', inputElementId: 'ping-amazon' },
-        { printElementId: 'ping-facebook_print', inputElementId: 'ping-amazon' },
-        { printElementId: 'ping-local_print', inputElementId: 'ping-local' },
-        { printElementId: 'outroDispositivo_print', inputElementId: 'outroDispositivo' },
-        { printElementId: 'conclusao_print', inputElementId: 'conclusao' },
-        { printElementId: 'endereco_print', inputElementId: 'endereco' },
-        { printElementId: 'contato_print', inputElementId: 'contato' },
-        { printElementId: 'contato2_print', inputElementId: 'contato2' },
-       
         
-
     ];
     for (let i = 0; i < printElements.length; i++) {
         const printElement = document.getElementById(printElements[i].printElementId);
@@ -80,7 +54,7 @@ os.addEventListener('click', function () {
 
 });
 
-btn.addEventListener('click', function () {
+os.addEventListener('click', function () {
     const data = document.querySelector("#agendamento");
     const datalida = data.value;
     const datacorreta = datalida.replace(/2023/g, "");
