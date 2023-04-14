@@ -92,11 +92,3 @@ text-transform: uppercase;
     border-radius: 2em;
 }
 
-.dark .fa-toggle-off {
-    color: var(--branco); /* Define a cor do ícone como vermelho */
-    font-size: 200%; /* Define o tamanho da fonte do ícone como 24 pixels */
-  }
-  .fa-toggle-on{
-    font-size: 200%;
-    color: var(--dark);
-  }
