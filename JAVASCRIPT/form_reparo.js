@@ -29,8 +29,8 @@ function setInnerHtmlValue(printElementId, inputElementId) {
 }
 
 */
-const os = document.querySelector(".botao");
-const btn = document.querySelector(".botao");
+const os = document.getElementById("botao");
+const btn = document.getElementById("botao");
 
 
 os.addEventListener('click', (event) => {
@@ -116,7 +116,7 @@ function inserirTexto() {
     texto += "DATA DO AGENDAMENTO: " + document.getElementById("agendamento_print").innerText + "\n";
     texto += "DESEJA OU NÃO ANTECIPAR: " + document.getElementById("antecipar_print").innerText;
 
-    document.getElementById("texto__area").value = texto;
+    document.getElementById("reparo__preview").value = texto;
 }
 
 
@@ -126,9 +126,29 @@ var copiar = document.getElementById("copiador")
 copiar.addEventListener("click", copiarTexto);
 
 function copiarTexto() {
-    let textoCopiado = document.getElementById("texto__area");
+    let textoCopiado = document.getElementById("reparo__preview");
     textoCopiado.select();
     textoCopiado.setSelectionRange(0, 99999)
     document.execCommand("copy");
-    alert("Control + V Efetuado : \n" + textoCopiado.value);
+    alert("Control +  Efetuado : \n" + textoCopiado.value);
 }
+
+const modo = document.getElementById('mode__icon');
+
+modo.addEventListener("click",() => {
+    const form = document.getElementById("body__form");
+    const tittle = document.getElementById("titulo__principalh1")
+    
+    if(modo.classList.contains('fa-toggle-on')){
+       modo.classList.remove('fa-toggle-on');
+       modo.classList.add('fa-toggle-off') ;
+
+       form.classList.add('dark');
+       tittle.classList.add('dark');
+       return;
+    }
+    modo.classList.add('fa-toggle-on');
+    modo.classList.remove('fa-toggle-off');
+    form.classList.remove("dark");
+    tittle.classList.remove('dark');
+});

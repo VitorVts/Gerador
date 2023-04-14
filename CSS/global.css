@@ -2,7 +2,10 @@
     --branco: #ffffff;
     --azul: #184c72;
     --verde: #63d391;
-    
+    --dark-verde:#3f865c;
+    --font:"Montserrat",sans-serif;
+    --cinza: #ddd;
+    --dark: #202124;
 }
 
 
@@ -10,224 +13,122 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-
-/*Formulario com respectivas informações a serem preenchidas*/
-form {
-    margin-top: 6em;
-    margin-left: 2em;
-    float: left;
-
-}
-
-
-
-.grupo{
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    font-family: "Montserrat",sans-serif;
     
 }
 
-/*Corpo do stie */
-body {
-    background-color: var(--branco);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    color: var(--verde);
-    margin-left: 2%;
-    margin-top: 2%;
-    justify-content: center;
-    display: inline-flex;
-
-}
 p{
     display: none;
 }
 
-/*Digitação padrão em uppercase para preenchimento*/
-input,
-textarea,select {
-    text-transform: uppercase !important;
-    font-family: "Montserrat",sans-serif;
-    font-weight:500;
+a{
+    
+        color: currentColor;
+        text-decoration: none;
 }
-
-/*Retirando as bordas do Fieldset*/
-fieldset {
-    border: 0;
-}
-
-/*Cor das respectivas bordas dos objetos do formulário*/
-input,select,textarea,option {
-    border-color: var(--azul);
-    border-width: 0.2rem;
-    border-radius: 0.7em;
+.container__tittle{
+    margin: 2em;
     display: flex;
-    margin-bottom: 1em;
-    
-}
-P{
-    display: none;
-}
-h1{
-    
-    width:max-content;
-    
-}
-
-#titulo__icon{
-    width: 30px;
-}
-
-
-
-/*Prorpiedadas de estilização para area onde o texto é preenchido */
-
-#texto_area {
-    float: inline-end;
-    width: 45em;
-    margin-bottom: 1%;
-    font-family: 'Montserrat';
-    font-weight: bold;
-    color: black;
-}
-
-/*Propriedades de estilização de cada objeto do menu*/
-.titulo .menu__container .menu__navegacao .menu__lista .menu__links {
-    align-items: center;
-    display: flex;
-    padding-right: 12px;
     justify-content: space-between;
-    float: inline;
-
 }
 
-/*Propriedades de estlização de cada link do menu */
-.titulo .menu__navegacao .menu__lista .menu__links .menu__link {
+
+.container__tittle h1{
+    font-family: var(--font);
+    color: var(--azul);
+}
+
+.menu__container .menu__navegacao .menu__lista{
     display: flex;
-    color:var(--azul) ;
-    text-align: center;
-    margin-top: 1%;
-    padding: 14px 16px;
-    text-decoration: none;
-    border-radius: 2em;
+    justify-content: right;
+    gap: 1em;
+    margin-top: 1em;
+    margin-right: 0;
+    list-style: none;
+    font-weight: bold;
+    color: var(--verde);
+    
 }
 
-/*Propriedade de estilização da lista do menu */
-.titulo .menu__navegacao .menu__lista {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: inline;
-
-}
-/*Estilização do Link Atual da Página*/
-.menu__selected {
+.menu__container .menu__navegacao .menu__lista .menu__links .menu__selected {
     background-color: var(--verde);
-    color: var(--azul);
-
-    box-shadow: unset var(--azul) 3px 3px 2px;
+    color: var(--branco);
+    border-width: 1px;
     border-radius: 2em;
-    padding: 14px 16px;
+    padding: 1em;
+    font-weight: bold;
 }
-/*Propriedades de estilização quando há a passagem do mouse por cima do link*/
-.titulo .menu__navegacao .menu__lista .menu__links .menu__link:hover {
+.menu__container .menu__navegacao .menu__lista .menu__links :hover{
     background-color: var(--verde);
-
-    box-shadow: unset 2px 2px 2px;
+    color: var(--branco);
+    border-width: 1px;
+    border-radius: 2em;
+    padding: 1em;
+    font-size: bold;
+    transition: 0.5s;
+    
 }
 
+#body__form{
+    animation: dark-to-light 0.3s ease-in-out;
+}
 
-
-/*Estilização do Titulo e Subtitulo da Pagina*/
-.titulo,.titulo__principal,.titulo__secundario {
-    color: var(--azul);
-    margin-bottom: 10%;
+.botao__criar,.botao__finalizar{
+    font-size: 1.5em;
     font-weight: bold;
+    background-color: var(--verde);
+    border-radius: 4em;
+    padding: 0.3em 1em;
+    border: none;
+    color: var(--branco);
 }
 
-.form select,input{
-    margin-top:3%;
-    padding: 3px;
-    width: 90%;
+.botao__finalizar:hover,.botao__criar:hover{
+    background-color: var(--dark-verde);
+    color: var(--branco);
+    transition: 0.4s;
 }
-/*Estilização do Textarea onde é printado a O.s*/
-#mascara {
-    margin-top: 1%;
-    font-size: 15px;
-    font-weight: bold;
-    top: 10%;
+
+input,select,button{
+    cursor: pointer;
+
 }
 
 
-.grupo {
-    font-weight: bold;
+.dark#body__form{
+    background-color: var(--dark);
+    animation: light-to-dark 0.3s ease-in-out;
+}
+.dark#titulo__principalh1{
     color: var(--verde);
 }
 
-
-
-.grupo:before,
-.grupo::after {
-    display: table;
-}
-
-.grupo::after {
-    clear: both;
-
-}
-
-.grupo input:focus,
-.campo select:focus,
-.campo textarea:focus {
-    background: #e0e0f8;
-
-}
-
-
-.endereco {
-    float: left;
-
-
-
-}
-
-.botao{
-    font-size: 1.5em;
-    font-family: "Montserrat",sans-serif;
-    font-weight: bold;
-    background: var(--verde);
-    border-radius: 4em;
-    color: #ffffff;
-    padding: 0.3em 1em;
+#mode__icon{
     display: flex;
-}
-
-#botao{
-margin-top: -1em;
-margin-bottom: 0.3em;
-}
-
-
-
-
-.botao:hover {
-    background: #3f865c;
-}
-
-.botao,
-select,input,a{
-    cursor: pointer;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 4em;
+    margin-left: 4em;
+    
 }
 
 
-
-
-
-
+@keyframes dark-to-light {
+    0%{
+        background-color: var(--dark);
+    }
+    100%{
+        background-color: var(--white);
+    }
+}
+@keyframes light-to-dark{
+    0%{
+        background-color: var(--white);
+    }
+    100%{
+        background-color: var(--dark);
+    }
+}
 
 
 

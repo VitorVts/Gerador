@@ -5,116 +5,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/adesao.css">
     <title>O.s Generator Alfa</title>
 </head>
-<header class="titulo">
-    <div class="tittle">
-        <h1 class="titulo__principal">Gerador de O.s Alfa</h1>
-    </div>
-    <div class="menu__container">
-        
-        <nav class="menu__navegacao">
-            <ul class="menu__lista">
-                <li class="menu__links">
-                    <a class="menu__selected">Adesão</a>
-                </li>
-                <li class="menu__links">
-                    <a href="reparo.html" class="menu__link">Suporte</a>
-                </li>
-                <li class="menu__links">
-                    <a class="menu__link">Religação</a>
-                </li>
 
-            </ul>
-        </nav>
-    </div>
+<body id="body__form">
+    <header class="container__tittle">
+        <div class="tittle__principal">
+            <h1 id="titulo__principalh1">Gerador de O.s Alfa</h1>
 
-</header>
-<body>
+        </div>
+        <div class="menu__container">
 
-    
+            <nav class="menu__navegacao">
+                <ul class="menu__lista">
+                    <li class="menu__links">
+                        <a class="menu__selected">Adesão</a>
+                    </li>
+                    <li class="menu__links">
+                        <a href="reparo.html" class="menu__link">Suporte</a>
+                    </li>
+                    <li class="menu__links">
+                        <a class="menu__link">Religação</a>
+                    </li>
 
-    <form action="" class="form">
-        <fieldset class="grupo">
-            <div class="select__valortaxa">
-                <label for="valortaxa">Valor da Taxa</label>
-                <input type="text" name="valortaxa" id="valortaxa" placeholder="R$"></input>
-            </div>
+                </ul>
+            </nav>
+        </div>
 
-
-
-            <div class="select__antecipar">
-                <label for="antecipar">Deseja Antecipar</label>
-                <select id="antecipar">
-                    <option selected disabled value="">Selecione</option>
-                    <option value="(   ) Sim ( X ) Não">Não</option>
-                    <option value="( X ) Sim ( ) Não">Sim</option>
-                </select>
-            </div>
-
-
-            <div class="select__modopagamento">
-                <label for="modopagamento">Modo de Pagamento</label>
-                <select id="modopagamento">
-                    <option selected disabled value="">Selecione</option>
-                    <option value="( X ) A VISTA    (   )3X  (   )Ação Marketing (  )Isento">A Vista</option>
-                    <option value="(   ) A VISTA    ( X )3X  (   )Ação Marketing">3X</option>
-                    <option value="(   ) A VISTA    (   )3X  ( X )Ação Marketing">Ação de Marketing</option>
-                </select>
-            </div>
-
-
-            <div class="select__plano">
-                <label for="plano">Selecione o Plano</label>
-                <select id="plano">
-                    <option selected disabled value="">Selecione</option>
-                    <option value="( X ) 200MBPS (   ) 40MBPS (  ) 20MBPS">200MB</option>
-                    <option value="(   ) 200MBPS ( X ) 40MBPS (  ) 20MBPS">40MB</option>
-                    <option value="(   ) 200MBPS (   ) 40MBPS ( X ) 20MBPS">20MB</option>
-                </select>
-            </div>
-
-
-
-            <div class="select__vencimento">
-                <label for="vencimento">Data de Vencimento</label>
-                <select id="vencimento">
-                    <option selected disabled value="">Selecione</option>
-                    <option>Dia 01</option>
-                    <option>Dia 05</option>
-                    <option>Dia 10</option>
-                </select>
-            </div>
-
-            <div class="select__agendamento">
-                <label for="date"><strong>Data de Agendamento</strong></label>
-                <input type="date" id="agendamento"></input>
-            </div>
-            <div class="contato">
-                <label for="contato">Contato</label>
-                <input type="tel" name="contato" id="contato" placeholder=" (21)12345-6789">
-                
-            </div>
-
-            <div class="contato">
-                <label for="contato2">Contato(2)</label>
-                <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789">
-            </div>
+    </header>
 
 
 
 
+    <div class="container">
+        <fieldset>
+            <form class="adesao__form">
+
+                <div class="adesao__valortaxa">
+                    <label for="valortaxa">Valor da Taxa</label>
+                    <input type="text" name="valortaxa" id="valortaxa" placeholder="R$"></input>
+                </div>
+
+
+
+                <div class="adesao__antecipar">
+                    <label for="antecipar">Deseja Antecipar</label>
+                    <select id="antecipar">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="(   ) Sim ( X ) Não">Não</option>
+                        <option value="( X ) Sim ( ) Não">Sim</option>
+                    </select>
+                </div>
+
+
+                <div class="adesao__modopagamento">
+                    <label for="modopagamento">Modo de Pagamento</label>
+                    <select id="modopagamento">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="( X ) A VISTA    (   )3X  (   )Ação Marketing (  )Isento">A Vista</option>
+                        <option value="(   ) A VISTA    ( X )3X  (   )Ação Marketing">3X</option>
+                        <option value="(   ) A VISTA    (   )3X  ( X )Ação Marketing">Ação de Marketing</option>
+                    </select>
+                </div>
+
+
+                <div class="adesao__plano">
+                    <label for="plano">Selecione o Plano</label>
+                    <select id="plano">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="( X ) 200MBPS (   ) 40MBPS (  ) 20MBPS">200MB</option>
+                        <option value="(   ) 200MBPS ( X ) 40MBPS (  ) 20MBPS">40MB</option>
+                        <option value="(   ) 200MBPS (   ) 40MBPS ( X ) 20MBPS">20MB</option>
+                    </select>
+                </div>
+
+
+
+                <div class="adesao__vencimento">
+                    <label for="vencimento">Data de Vencimento</label>
+                    <select id="vencimento">
+                        <option selected disabled value="">Selecione</option>
+                        <option>Dia 01</option>
+                        <option>Dia 05</option>
+                        <option>Dia 10</option>
+                    </select>
+                </div>
+
+                <div class="adesao__agendamento">
+                    <label for="date"><strong>Data de Agendamento</strong></label>
+                    <input type="date" id="agendamento"></input>
+                </div>
+
+                <div class="adesao__contato">
+                    <label for="contato">Contato</label>
+                    <input type="tel" name="contato" id="contato" placeholder=" (21)12345-6789">
+
+                </div>
+
+                <div class="adesao__contato2">
+                    <label for="contato2">Contato(2)</label>
+                    <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789">
+                </div>
+
+                <div class="endereco">
+                    <label>Endereço e Ponto de referência</label>
+                    <textarea rows="2" type="text" class="textarea" id="endereco"></textarea><br>
+                </div>
+                <div class="adesao__botao">
+                <button id="botao" class="botao__criar">Criar</button>
+                </div>
+            </form>
         </fieldset>
-        
+
         <fieldset id="mascara">
-            <div class="endereco">
-                <label>Endereço e Ponto de referência</label><br>
-                <textarea rows="2" style="width: 220%;" type="text" class="textarea" id="endereco"></textarea><br>
-                <button id="botao" class="botao">Criar</button>
-            </div>
+
             <div class="print">
 
                 <p>PLANO: <span id="plano_print"></span> </p>
@@ -127,11 +136,15 @@
                 <p>DATA DO AGENDAMENTO:<span id="agendamento_print"></span> <br>
                 <p>DESEJA OU NÃO ANTECIPAR:<span id="antecipar_print"></span></p>
             </div>
-
-            <textarea id="texto_area" rows="10"></textarea>
+            <div class="container__preview">
+                <textarea id="adesao__preview" rows="10" disabled></textarea>
+            </div>
+            <button id="copiador" class="botao__finalizar">Finalizar</button>
         </fieldset>
-        <button id="copiador" class="botao">Finalizar</button>
-    </form>
+        <div class="dark__mode">
+            <i class="fa-solid fa-moon" id="mode__icon"></i>
+        </div>
+    </div>
 
 
     <!--<fieldset id=mascara>

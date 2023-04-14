@@ -6,80 +6,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O.S Reparo</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/reparo.css">
     <link rel="stylesheet" href="CSS/global.css">
 </head>
-<header class="titulo">
-    <div class="container__titulo">
-        <h1 class="titulo__principal">Gerador de O.s Alfa</h1>
-    </div>
-    <aside>
-        <div class="menu__container">
-            <nav class="menu__navegacao">
-                <ul class="menu__lista">
-                    <li class="menu__links">
-                        <a class="menu__selected">Suporte</a>
-                    </li>
-                    <li class="menu__links">
-                        <a href="index.html" class="menu__link">Adesão</a>
-                    </li>
 
-                    <li class="menu__links">
-                        <a class="menu__link">Religação</a>
-                    </li>
+<div class="container">
 
-                </ul>
-            </nav>
-        </div>
-    </aside>
-</header>
+    <body id="body__form">
+        <header class="titulo">
+            <header class="container__tittle">
+                <div class="tittle__principal">
+                    <h1 id="titulo__principalh1">Gerador de O.s Alfa</h1>
 
-<body>
-    <form class="group">
-        <fieldset class="form_reparo">
-            <div class="container__formulario1">
-                <div class="select__problema">
-                    <label for="select__ledloss">Problema</label>
+                </div>
+                <div class="menu__container">
+
+                    <nav class="menu__navegacao">
+                        <ul class="menu__lista">
+                            <li class="menu__links">
+                                <a class="menu__link">Adesão</a>
+                            </li>
+                            <li class="menu__links">
+                                <a href="reparo.html" class="menu__selected">Suporte</a>
+                            </li>
+                            <li class="menu__links">
+                                <a class="menu__link">Religação</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+            </header>
+
+        </header>
+        <fieldset>
+            <form class="reparo__form">
+
+
+                <div class="reparo__problema">
+                    <label for=reparo__ledloss">Problema</label>
                     <input type="text" class="form__input" id="problema">
                 </div>
-                <div class="select__acesso">
+                <div class="reparo__acesso">
                     <label for="acesso">Acesso</label>
                     <select for="acesso" id="acesso">
                         <option value="" selected disabled>Selecione</option>
-                        <option value="(  )CABEADO ( X )WI-FI" >Sim</option>
-                        <option value="( X )CABEADO (  )WI-FI" >Não</option>
+                        <option value="(  )CABEADO ( X )WI-FI">WI-FI</option>
+                        <option value="( X )CABEADO (  )WI-FI">Cabo</option>
+                        <option value="( X )CABEADO (  )WI-FI"">Ambos</option>
                     </select>
                 </div>
-                <div class="select__alarme">
-                    <label for="alarme">Verificado Alarmes</label>
-                    <select for="alarme" id="alarme">
-                        <option value="" selected>Selecione</option>
-                        <option value="Sim" id="naoVerificado">Sim</option>
-                        <option value="Não" id="naoVerificado">Não</option>
-                    </select>
+                <div class=" reparo__alarme">
+                            <label for="alarme">Verificado Alarmes</label>
+                            <select for="alarme" id="alarme">
+                                <option value="" selected>Selecione</option>
+                                <option value="Sim" id="naoVerificado">Sim</option>
+                                <option value="Não" id="naoVerificado">Não</option>
+                            </select>
                 </div>
-                <div class="select__cto">
+                <div class="reparo__cto">
                     <label for="cto">Cto</label>
                     <input type="text" id="cto" class="form__input">
                 </div>
-                <div class="select__ssid">
+                <div class="reparo__ssid">
                     <label for="ssid">SSID</label>
                     <input type="text" id="ssid" class="form__input">
                 </div>
-                <div class="select__senha">
+                <div class="reparo__senha">
                     <label for="senha">Senha</label>
                     <input type="text" id="senha" class="form__input">
                 </div>
-            </div>
-            <div class="container__formulario2">
-                <div class="select__porta">
+
+
+                <div class="reparo__porta">
                     <label for="porta">Porta</label>
                     <input type="text" id="porta" for="porta" class="form__input">
                 </div>
 
 
-                <div class="select__dbm">
+                <div class="reparo__dbm">
                     <label for="dbmsinal">Dbm Wi-fi</label>
                     <select for="dbmsinal" id="dbmsinal" name="dbmsinal">
                         <option value="" selected disabled>Selecione</option>
@@ -88,7 +97,8 @@
                         <option value="RUIM.     ( X )-68 a -99dBm">Ruim</option>
                     </select>
                 </div>
-                <div class="select__trocaFrequencia">
+
+                <div class="reparo__trocaFrequencia">
                     <label for="trocaFrequencia">Troca de Frequencia</label>
                     <select for="trocaFrequencia" name="trocaFrequencia" id="trocaFrequencia">
                         <option value="" selected disable>Selecione</option>
@@ -96,13 +106,14 @@
                         <option value="(  )SIM  ( X )NÃO">Não</option>
                     </select>
                 </div>
-            </div>
 
-            <div class="container__formulario3">
 
-                <div class="select_testesRealizados">
+
+
+
+                <div class="reparo_testesRealizados">
                     <label for="testesRealizados">Testes Realiazados</label>
-                    <select for="testesRealizados"id="testesRealizados" name="testesRealizados">
+                    <select for="testesRealizados" id="testesRealizados" name="testesRealizados">
                         <option value="" selected disabled>Selecione</option>
                         <option value="( X )2.4GHZ   (  )5.0GHZ">2.4Ghz</option>
                         <option value="(  )2.4GHZ   ( X )5.0GHZ">5 Ghz</option>
@@ -122,68 +133,77 @@
                     </select>
                 </div>
 
-                    <div class="select__ping">
-                        <label for="pingc-core1">Testes Ping</label>
-                        <select id="ping-core1" name="ping-core1" for="ping-core1">
-                            <option value="" disabled selected>Core 1</option>
-                            <option value="   ( X ) OK   (   ) FALHA">OK</option>
-                            <option value="   (   ) OK   ( X ) FALHA">Falha</option>
-                        </select>
+                <div class="reparo__ping">
+                    <label for="pingc-core1">Testes Ping</label>
+                    <select id="ping-core1" name="ping-core1" for="ping-core1">
+                        <option value="" disabled selected>CORE: 1</option>
+                        <option value="   ( X ) OK   (   ) FALHA">OK</option>
+                        <option value="   (   ) OK   ( X ) FALHA">Falha</option>
+                    </select>
 
-                        <select id="ping-core2" name="ping-core2" for ="ping-core2">
-                            <option value="" disabled selected>Core 2</option>
-                            <option value="   ( X ) OK   (   ) FALHA">OK</option>
-                            <option value="   (   ) OK   ( X ) FALHA">Falha</option>
-                        </select>
+                    <select id="ping-core2" name="ping-core2" for="ping-core2">
+                        <option value="" disabled selected>CORE: 2</option>
+                        <option value="   ( X ) OK   (   ) FALHA">OK</option>
+                        <option value="   (   ) OK   ( X ) FALHA">Falha</option>
+                    </select>
 
-                        <select id="ping-amazon" name="ping-amazon" for="ping-amazon">
-                            <option value="" disabled selected>amazon</option>
-                            <option value="   ( X ) OK   (   ) FALHA">OK</option>
-                            <option value="   (   ) OK   ( X ) FALHA">Falha</option>
-                        </select>
+                    <select id="ping-amazon" name="ping-amazon" for="ping-amazon">
+                        <option value="" disabled selected>AMAZON</option>
+                        <option value="   ( X ) OK   (   ) FALHA">OK</option>
+                        <option value="   (   ) OK   ( X ) FALHA">Falha</option>
+                    </select>
+                    <select id="ping-facebook" name="ping-facebook" for="ping-facebook">
+                        <option value="" disabled selected>FACEBOOK</option>
+                        <option value="   ( X ) OK   (   ) FALHA">OK</option>
+                        <option value="   (   ) OK   ( X ) FALHA">Falha</option>
+                    </select>
+                    <select id="ping-local" name="ping-local" for="ping-local">
+                        <option value="" disabled selected>LOCAL</option>
+                        <option value="   ( X ) OK   (   ) FALHA">OK</option>
+                        <option value="   (   ) OK   ( X ) FALHA">Falha</option>
+                    </select>
+                    <label for="outrodispositivo">Outro Dispositivo</label>
+                    <input type="text" id="outroDispositivo">
 
 
+                </div>
+
+                <div class="contato">
+                    <label for="contato">Contato</label>
+                    <input type="tel" name="contato" id="contato" placeholder=" (21)12345-6789">
+                    <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789">
+                    <div class=reparo__agendamento">
+                        <label for="date"><strong>Data de Agendamento</strong></label>
+                        <input type="date" id="agendamento"></input>
                     </div>
-                    <div>
-                        <label for="otherpings">Testes Ping</label>
-                        <select id="ping-facebook" name="ping-facebook" for="ping-facebook">
-                            <option value="" disabled selected>facebook</option>
-                            <option value="   ( X ) OK   (   ) FALHA">OK</option>
-                            <option value="   (   ) OK   ( X ) FALHA">Falha</option>
-                        </select>
-                        <select id="ping-local" name="ping-local" for="ping-local">
-                            <option value="" disabled selected>local</option>
-                            <option value="   ( X ) OK   (   ) FALHA">OK</option>
-                            <option value="   (   ) OK   ( X ) FALHA">Falha</option>
-                        </select>
-                        <label for="outrodispositivo">Outro Dispositivo</label>
-                        <input type="text" id="outroDispositivo" >    
-                         
-                    </div>
-                   
+                </div>
+                <div class="reparo__conclusao">
+                    <label for="conclusao">Conclusão</label>
+                    <textarea name="conclusao" id="conclusao"  rows="2"></textarea>
+                </div>
 
-            </div>
+                <div class="endereco">
+                    <label>Endereço e Ponto de referência</label>
+                    <textarea rows="2" type="text" class="textarea" id="endereco"></textarea><br>
+                </div>
 
-            </div>
-        <div class="container__formulario4">
-            <div class="contato">
-                <label for="contato">Contato</label>
-                <input type="tel" name="contato" id="contato" placeholder=" (21)12345-6789">
-                <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789">
-            </div>
-            <div class="select__agendamento">
-                <label for="date"><strong>Data de Agendamento</strong></label>
-                <input type="date" id="agendamento"></input>
-            </div>
-            
-           
-        </div>
-         
-        
-                </fieldset>
+                <div class="reparo__botao">
+                    <button id="botao" class="botao__criar">Criar</button>
+                </div>
 
 
-        
+
+
+
+
+
+
+
+            </form>
+        </fieldset>
+
+
+
         <div class="print">
 
             <p>"PROBLEMA: "<span id="problema_print"></span> </p>
@@ -212,55 +232,20 @@
             <p>DESEJA OU NÃO ANTECIPAR:<span id="antecipar_print"></span></p>
         </div>
 
+        <fieldset>
 
-        
-        
-
-
-
-
-        <!--<fieldset id=mascara>
-            <div class="print">
-                <p>PLANO: <span id="plano_print"></span> </p>
-                <p>VENCIMENTO: <span id="vencimento_print"> </p>
-                <p>VALOR TAXA: R$<span id="valortaxa_print"></span>
-                <p>
-                <p>MODO DE PAGAMENTO: <span id="modopagamento_print"></span></p>
-                <p>PONTOS DE REFERÊNCIA:<span id="endereco_print"></span></p>
-                <p>CONTATOS DO CLIENTE:<span id="contato_print"></span></p>
-                <p>CONTATOS(2) DO CLIENTE:<span id="contato2_print"></span><br></p>
-                <p>DATA DO AGENDAMENTO:<span id="agendamento_print"></span> <br>
-                <p>DESEJA OU NÃO ANTECIPAR:<span id="antecipar_print"></span></label></p>
+            <div class="container__preview">
+                <textarea id="reparo__preview" rows="10" disabled></textarea>
             </div>
-            
-        </fieldset>-->
-
-
-
-
+            <button id="copiador" class="botao__finalizar">Finalizar</button>
         </fieldset>
-    </form>
-    
-    <div class="container__texts">
-        <div class="endereco_reparo">
-            <label>Endereço e Ponto de referência</label><br>
-            <textarea rows="2"  type="text" class="textarea" id="endereco"></textarea>
-            <button id="botao" class="botao">Criar</button>
+        <div class="dark__mode">
+            <i class="fa-solid fa-toggle-on"id="mode__icon" "></i>
         </div>
-    <div class="conclusaotxt">
-        <label for="conclusao">Conclusão</label>
-                <textarea name="conclusao" id="conclusao" cols="10" rows="10"></textarea>
-                <button id="copiador" class="botao">Finalizar</button>
+        </fieldset>
 
-            </div>
-            <label for="texto__area">Preview</label>
-            <textarea id="texto__area"></textarea>
-            
-            </div>
-            </div>
-    
-    
-</body>
-<script src="JAVASCRIPT/form_reparo.js"></script>
+
+    </body>
+    <script src="JAVASCRIPT/form_reparo.js"></script>
 
 </html>

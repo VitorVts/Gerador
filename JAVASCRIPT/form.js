@@ -1,34 +1,3 @@
-/* //  
-const os = document.querySelector("#botao");
-const btn = document.querySelector("#botao");
-os.addEventListener('click', function() {
-    event.preventDefault();
-
-    setInnerHtmlValue('plano_print', 'plano');
-    setInnerHtmlValue('vencimento_print', 'vencimento');
-    setInnerHtmlValue('valortaxa_print', 'valortaxa');
-    setInnerHtmlValue('modopagamento_print', 'modopagamento');
-    setInnerHtmlValue('endereco_print', 'endereco');
-    setInnerHtmlValue('contato_print', 'contato');
-    setInnerHtmlValue('contato2_print', 'contato2');
-    setInnerHtmlValue('antecipar_print','antecipar');
-});
-
-btn.addEventListener('click', function() {
-    const data = document.querySelector("#agendamento");
-    const datalida = data.value;
-    const datacorreta = datalida.replace(/2023/g, "");
-    const dataconvert = datacorreta.split('-').reverse().join(' / ');
-    document.getElementById("agendamento_print").innerHTML = dataconvert;
-});
-
-function setInnerHtmlValue(printElementId, inputElementId) {
-    const printElement = document.getElementById(printElementId);
-    const inputElement = document.getElementById(inputElementId);
-    printElement.innerHTML = inputElement.value;
-}
-
-*/
 const os = document.querySelector("#botao");
 
 
@@ -86,7 +55,7 @@ function inserirTexto() {
     texto += "DATA DO AGENDAMENTO: " + document.getElementById("agendamento_print").innerText + "\n";
     texto += "DESEJA OU NÃO ANTECIPAR: " + document.getElementById("antecipar_print").innerText;
 
-    document.getElementById("texto_area").value = texto;
+    document.getElementById("adesao__preview").value = texto;
 }
 
 //BOTÃO DE COPIA DECLARAÇÃO 
@@ -95,9 +64,29 @@ var copiar = document.getElementById("copiador")
 copiar.addEventListener("click", copiarTexto);
 
 function copiarTexto() {
-    let textoCopiado = document.getElementById("texto_area");
+    let textoCopiado = document.getElementById("adesao__preview");
     textoCopiado.select();
     textoCopiado.setSelectionRange(0, 99999)
     document.execCommand("copy");
     alert("Control + V Efetuado : \n" + textoCopiado.value);
 }
+
+const modo = document.getElementById('mode__icon');
+
+modo.addEventListener("click",() => {
+    const form = document.getElementById("body__form");
+    const tittle = document.getElementById("titulo__principalh1")
+    
+    if(modo.classList.contains('fa-moon')){
+       modo.classList.remove('fa-moon');
+       modo.classList.add('fa-sun') ;
+
+       form.classList.add('dark');
+       tittle.classList.add('dark');
+       return;
+    }
+    modo.classList.add('fa-moon');
+    modo.classList.remove('fa-sun');
+    form.classList.remove("dark");
+    tittle.classList.remove('dark');
+});
