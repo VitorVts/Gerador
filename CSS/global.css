@@ -40,15 +40,29 @@ a{
 
 .menu__container .menu__navegacao .menu__lista{
     display: flex;
+    align-items:center;
     justify-content: right;
     gap: 1em;
-    margin-top: 1em;
     margin-right: 0;
     list-style: none;
     font-weight: bold;
     color: var(--verde);
     
 }
+.menu__container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+
+}
+.menu__container .dark__mode #mode__icon{
+    color: var(--verde);
+    
+}
+
+
+
 
 .menu__container .menu__navegacao .menu__lista .menu__links .menu__selected {
     background-color: var(--verde);
@@ -81,12 +95,17 @@ a{
     padding: 0.3em 1em;
     border: none;
     color: var(--branco);
+    gap: 1em;
 }
+.botao__finalizar #copiador{
+    gap: 2em;
 
+}
 .botao__finalizar:hover,.botao__criar:hover{
     background-color: var(--dark-verde);
     color: var(--branco);
     transition: 0.4s;
+    
 }
 
 input,select,button{
@@ -103,22 +122,17 @@ input,select,button{
     color: var(--verde);
 }
 
-#mode__icon{
-    display:flex;
-    margin-left: 25em;
-    margin-top: 1%;
-}
 
 
 
 
-.dark .fa-toggle-off {
-    color: var(--branco); /* Define a cor do ícone como vermelho */
+
+.dark .fa-toggle-on {
+    /* Define a cor do ícone como vermelho */
     font-size: 200%; /* Define o tamanho da fonte do ícone como 24 pixels */
   }
-  .fa-toggle-on{
+  .fa-toggle-off{
     font-size: 200%;
-    color: var(--dark);
   }
 
 @keyframes dark-to-light {
