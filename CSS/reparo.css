@@ -14,11 +14,19 @@
 }
 .container .reparo__form{
     display: grid;
+    flex-wrap: wrap;
     justify-content: center;
     grid-template-columns: repeat(4,1fr);
     gap:1em;
     
 }
+.container .reparo__onu{
+display: flex;
+flex-direction: column;
+
+
+}
+
 
 .container .reparo__form label{
     display: block;

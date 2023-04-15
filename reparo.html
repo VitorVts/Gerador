@@ -20,10 +20,14 @@
             <header class="container__tittle">
                 <div class="tittle__principal">
                     <h1 id="titulo__principalh1">Gerador de O.s Alfa</h1>
-
+                    
                 </div>
-                <div class="menu__container">
+                <div class="dark__mode">
+                    <i class="fa-solid fa-toggle-on" id="mode__icon" "></i>
+                </div>
 
+                <div class="menu__container">
+                    
                     <nav class="menu__navegacao">
                         <ul class="menu__lista">
                             <li class="menu__links">
@@ -68,35 +72,9 @@
                                 <option value="Não" id="naoVerificado">Não</option>
                             </select>
                 </div>
-                <div class="reparo__cto">
-                    <label for="cto">Cto</label>
-                    <input type="text" id="cto" class="form__input">
-                </div>
-                <div class="reparo__ssid">
-                    <label for="ssid">SSID</label>
-                    <input type="text" id="ssid" class="form__input">
-                </div>
-                <div class="reparo__senha">
-                    <label for="senha">Senha</label>
-                    <input type="text" id="senha" class="form__input">
-                </div>
+                
 
-
-                <div class="reparo__porta">
-                    <label for="porta">Porta</label>
-                    <input type="text" id="porta" for="porta" class="form__input">
-                </div>
-
-
-                <div class="reparo__dbm">
-                    <label for="dbmsinal">Dbm Wi-fi</label>
-                    <select for="dbmsinal" id="dbmsinal" name="dbmsinal">
-                        <option value="" selected disabled>Selecione</option>
-                        <option value="BOM 	  ( X )-28 a -53dBm">Bom</option>
-                        <option value="IRREGULAR ( X )-54 a -67dBm">Irregular</option>
-                        <option value="RUIM.     ( X )-68 a -99dBm">Ruim</option>
-                    </select>
-                </div>
+                
 
                 <div class="reparo__trocaFrequencia">
                     <label for="trocaFrequencia">Troca de Frequencia</label>
@@ -108,7 +86,34 @@
                 </div>
 
 
-
+                <div class="reparo__onu">
+                    <div class="reparo__dbm">
+                        <label for="dbmsinal">Dbm Wi-fi</label>
+                        <select for="dbmsinal" id="dbmsinal" name="dbmsinal">
+                            <option value="" selected disabled>Selecione</option>
+                            <option value="BOM 	  ( X )-28 a -53dBm">Bom</option>
+                            <option value="IRREGULAR ( X )-54 a -67dBm">Irregular</option>
+                            <option value="RUIM.     ( X )-68 a -99dBm">Ruim</option>
+                        </select>
+                    </div>
+                    <div class="reparo__ssid">
+                        <label for="ssid">SSID</label>
+                        <input type="text" id="ssid" class="form__input">
+                    </div>
+                    <div class="reparo__senha">
+                        <label for="senha">Senha</label>
+                        <input type="text" id="senha" class="form__input">
+                    </div>
+    
+                    <div class="reparo__cto">
+                        <label for="cto">Cto</label>
+                        <input type="text" id="cto" class="form__input">
+                    </div>
+                    <div class="reparo__porta">
+                        <label for="porta">Porta</label>
+                        <input type="text" id="porta" for="porta" class="form__input">
+                    </div>
+                </div>
 
 
                 <div class="reparo_testesRealizados">
@@ -239,13 +244,12 @@
             </div>
             <button id="copiador" class="botao__finalizar">Finalizar</button>
         </fieldset>
-        <div class="dark__mode">
-            <i class="fa-solid fa-toggle-on"id="mode__icon" "></i>
-        </div>
+        
         </fieldset>
 
 
     </body>
+    <script src="JAVASCRIPT/main.js"></script>
     <script src="JAVASCRIPT/form_reparo.js"></script>
 
 </html>

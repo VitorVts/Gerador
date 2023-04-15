@@ -104,13 +104,13 @@ input,select,button{
 }
 
 #mode__icon{
-    display: flex;
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 4em;
-    margin-left: 4em;
-    
+    display:flex;
+    margin-left: 25em;
+    margin-top: 1%;
 }
+
+
+
 
 .dark .fa-toggle-off {
     color: var(--branco); /* Define a cor do ícone como vermelho */
