@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O.S Reparo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/mud_endereco.css">
+    <link rel="stylesheet" href="CSS/global.css">
+</head>
+
+
+
+    <body id="body__form">
+        
+            <header class="container__tittle">
+                <div class="tittle__principal">
+                    <h1 id="titulo__principalh1">Gerador de O.s Alfa</h1>
+                    
+                </div>
+                
+                <div class="menu__container">
+                    <div class="dark__mode">
+                        <i class="fa-solid fa-toggle-off" id="mode__icon" "></i>
+                    </div>
+                    <nav class="menu__navegacao">
+                        
+                        <ul class="menu__lista">
+                            <li class="menu__links">
+                                <a href="index.html" class="menu__link">Adesão</a>
+                            </li>
+                            <li class="menu__links">
+                                <a href="reparo.html" class="menu__link">Suporte</a>
+                            </li>
+                            <li class="menu__links">
+                                <a href="mudança_endereço.html" class="menu__selected">Mud/Endereço</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+            </header>
+            <div class="container">
+            <fieldset >
+
+                <form class="mud__endereco__form">
+                    
+                    <div class="mud__valortaxa">
+                        <label for="valortaxa">Valor da Taxa</label>
+                        <input type="text" name="valortaxa" id="mud__valortaxa" placeholder="R$"></input>
+                    </div>
+    
+                    <div class="mud__ssid">
+                        <label for="ssid">SSID</label>
+                        <input type="text" id="mud__ssid" class="form__input">
+                    </div>
+
+                    <div class="mud__senha">
+                        <label for="senha">Senha</label>
+                        <input type="text" id="mud__senha" class="form__input">
+                    </div>
+    
+                    <div class="mud__cto">
+                        <label for="cto">Cto</label>
+                        <input type="text" id="mud__cto" class="form__input">
+                    </div>
+                    
+                    <div class="mud__porta">
+                        <label for="porta">Porta</label>
+                        <input type="text" id="mud__porta" for="porta" class="form__input">
+                    </div>
+                    <div class="contato">
+                        <label for="contato">Contato</label>
+                        <input type="tel" name="contato" id="contato" placeholder=" (21)12345-6789">
+                        <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789">
+                        
+                    </div>
+
+                    <div class="mud__agendamento">
+                        <label for="date"><strong>Data de Agendamento</strong></label>
+                        <input type="date" id="agendamento"></input>
+                    </div>
+
+                    <div class="mud__endereco__antigo">
+                        <label for="endereco__antigo">Endereço antigo</label>
+                        <textarea name="endereco__antigo" id="mud__endereco__antigo"  rows="1"></textarea>
+                        
+                        <label>Ponto de referência ANTIGO</label>
+                        <textarea rows="1" type="text" class="textarea" id="ref__antigo"></textarea><br>
+                        
+                    </div>
+
+                    <div class="mud__endereco__novo">
+                        <label for="endereco__novo">Novo Endereço</label>
+                        <textarea name="endereco__novo" id="mud__endereco__novo"  rows="1"></textarea>
+                        
+                        <label>Ponto de referência NOVO</label>
+                        <textarea rows="1" type="text" class="textarea" id="ref__novo"></textarea><br>
+                        <div class="mud__botao">
+                            <button id="botao" class="botao__criar">
+                                Criar
+                                <i class="fa-sharp fa-solid fa-plus" style="color: #ffffff;"></i>
+                        </div>
+                    </div>
+
+    
+                    
+                    
+                </form>
+                
+
+
+            </fieldset>
+
+            <div class="print">
+
+                <p>SSID<span id="mud__ssid__print"></span> </p>
+                <p>SENHA:<span id="mud__senha__print"></span> </p>
+                <p>CTO:<span id="mud__cto__print"></span> </p>
+                <p>PORTA:<span id="mud__porta__print"></span></p>
+                <p>ENDEREÇO ANTIGO:  <span id="mud__endereco__antigo__print"></span></p>
+                <p>PONTOS DE REFERÊNCIA:<span id="ref__antigo__print"></span></p>
+                <p>NOVO ENDEREÇO: <span id="mud__endereco__novo__print"></span></p>
+                <p>PONTOS DE REFERÊNCIA:<span id="ref__novo__print"></span></p>
+                <p>VALOR TAXA:R$<span id="mud__valortaxa__print"></span></p>
+                <p>CONTATO DO CLIENTE <span id="contato__print"></span></p>
+                <p>CONTATO(2) DO CLIENTE:<span id="contato2__print"> </span></p>
+                <p>DATA DE AGENDAMENTO:<span id="agendamento__print"></span></p>
+               
+            </div>
+    
+            <fieldset>
+    
+                <div class="container__preview">
+                    <textarea id="mud__preview" rows="10" disabled></textarea>
+                </div>
+                <button id="copiador" class="botao__finalizar">
+                    Finalizar
+                    <i class="fa-regular fa-copy" style="color: #ffffff;"></i>
+                </button>
+        </div>
+</body>
+<script src="JAVASCRIPT/main.js"></script>
+    <script src="JAVASCRIPT/form_mud__endereco.js"></script>
+</html>

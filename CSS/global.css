@@ -15,7 +15,13 @@
     box-sizing: border-box;
     font-family: "Montserrat",sans-serif;
     
+
 }
+.container__preview{
+    color: #ddd;
+}
+
+
 
 p{
     display: none;
@@ -83,11 +89,22 @@ a{
     
 }
 
-#body__form{
-    animation: dark-to-light 0.3s ease-in-out;
+.container .container__preview textarea{
+    width: 100%;
+    border: none;
+    font-size: large;
+    padding-left: 1em;
+    padding-top: 2%;
+    background-color: var(--branco);
+    border-radius: 2em;
 }
 
+
+
+
+
 .botao__criar,.botao__finalizar{
+    display: block;
     font-size: 1.5em;
     font-weight: bold;
     background-color: var(--verde);
@@ -95,12 +112,9 @@ a{
     padding: 0.3em 1em;
     border: none;
     color: var(--branco);
-    gap: 1em;
+    margin: 0.5em;
 }
-.botao__finalizar #copiador{
-    gap: 2em;
 
-}
 .botao__finalizar:hover,.botao__criar:hover{
     background-color: var(--dark-verde);
     color: var(--branco);
@@ -113,6 +127,17 @@ input,select,button{
 
 }
 
+
+
+
+
+
+
+
+
+#body__form{
+    animation: dark-to-light 0.3s ease-in-out;
+}
 
 .dark#body__form{
     background-color: var(--dark);
@@ -134,6 +159,11 @@ input,select,button{
   .fa-toggle-off{
     font-size: 200%;
   }
+
+
+
+
+
 
 @keyframes dark-to-light {
     0%{

@@ -1,3 +1,7 @@
+
+
+
+
 const modo = document.getElementById('mode__icon');
 
     modo.addEventListener("click",() => {

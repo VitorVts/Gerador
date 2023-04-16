@@ -40,7 +40,7 @@ os.addEventListener('click', (event) => {
 os.addEventListener('click', function () {
     const data = document.querySelector("#agendamento");
     const datalida = data.value;
-    const datacorreta = datalida.replace(/2023/g, "");
+    const datacorreta = datalida.replace(/-2023/g, "");
     const dataconvert = datacorreta.split('-').reverse().join(' / ');
     document.getElementById("agendamento_print").innerHTML = dataconvert;
 });

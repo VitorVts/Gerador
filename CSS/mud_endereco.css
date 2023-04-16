@@ -9,22 +9,23 @@
     padding: 2em;
 
 }
-.container .adesao__form{
+
+.container .mud__endereco__form{
     display: grid;
+    flex-wrap: wrap;
     justify-content: center;
     grid-template-columns: repeat(4,1fr);
-    gap:2em;
+    gap:1em;
     
 }
 
-.container .adesao__form label{
+.container .mud__endereco__form label{
     display: block;
     color: var(--verde);
     font-weight: bolder;
-    margin-bottom: 3%;
+    
 }
-
-.container .adesao__form input,select{
+.container .mud__endereco__form input,select{
     display: flex;
     width: 80%;
     margin:2%;
@@ -33,32 +34,23 @@
     border-radius: 1em;
     border: 0.5px solid var(--azul);
 }
-.container .adesao__form .endereco {
-    grid-column: span 3 ;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    
-}
-.container .adesao__form .endereco textarea {
-width: 94%;
-border-radius: 2em;
-padding:1%;
-font-weight: bold;
-text-transform: uppercase;
-
-}
-
-.container .botao__finalizar {
-    margin-top: 3%;
-}
-
-.container .container__preview{
+.container .mud__endereco__form .mud__endereco__antigo,.mud__endereco__novo{
+    grid-column: span 4;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    align-items: safe;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.5rem;
 }
+
+.container .mud__endereco__form  textarea{
+  
+    font-size:large;
+    padding: 0.7em;
+    padding-left: 1em;
+    border-radius: 2em;
+}
+
 .container .container__preview textarea{
     width: 100%;
     border: none;
