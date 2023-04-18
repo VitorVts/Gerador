@@ -46,9 +46,9 @@ botao.addEventListener("click", inserirTexto);
 function inserirTexto() {
     var texto = "";
     texto += "PLANO: " + document.getElementById("plano_print").innerText + "\n";
-    texto += "VENCIMENTO: " + document.getElementById("vencimento_print").innerText + "\n";
+    texto += "VENCIMENTO: " + document.getElementById("vencimento_print").innerText + "\n\n";
     texto += "VALOR TAXA: R$" + document.getElementById("valortaxa_print").innerText + "\n";
-    texto += "MODO DE PAGAMENTO: " + document.getElementById("modopagamento_print").innerText + "\n";
+    texto += "MODO DE PAGAMENTO: " + document.getElementById("modopagamento_print").innerText + "\n\n";
     texto += "PONTOS DE REFERÊNCIA: " + document.getElementById("endereco_print").innerText + "\n";
     texto += "CONTATOS DO CLIENTE: " + document.getElementById("contato_print").innerText + "\n";
     texto += "CONTATOS(2) DO CLIENTE: " + document.getElementById("contato2_print").innerText + "\n";

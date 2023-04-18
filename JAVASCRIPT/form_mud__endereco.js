@@ -54,10 +54,10 @@ function inserirTexto() {
     texto += "CTO:" + document.getElementById("mud__cto__print").innerText + "\n";
     texto += "PORTA: " + document.getElementById("mud__porta__print").innerText + "\n";
     texto += "ENDEREÇO ANTIGO: " + document.getElementById("mud__endereco__antigo__print").innerText + "\n";
-    texto += "PONTOS DE REFERÊNCIA:" + document.getElementById("ref__antigo__print").innerText + "\n";
+    texto += "PONTOS DE REFERÊNCIA:" + document.getElementById("ref__antigo__print").innerText + "\n\n";
     texto += "NOVO ENDEREÇO: " + document.getElementById("mud__endereco__novo__print").innerText + "\n";
-    texto += "PONTOS DE REFERÊNCIA:" + document.getElementById("ref__novo__print").innerText + "\n";
-    texto += "VALOR TAXA:R$" + document.getElementById("mud__valortaxa__print").innerText + "\n";
+    texto += "PONTOS DE REFERÊNCIA:" + document.getElementById("ref__novo__print").innerText + "\n\n";
+    texto += "VALOR TAXA:R$" + document.getElementById("mud__valortaxa__print").innerText + "\n\n";
     texto += "CONTATO DO CLIENTE " + document.getElementById("contato__print").innerText + "\n";
     texto += "CONTATO(2) DO CLIENTE:" + document.getElementById("contato2__print").innerText + "\n";
     texto += "DATA DE AGENDAMENTO:" + document.getElementById("agendamento__print").innerText + "\n";

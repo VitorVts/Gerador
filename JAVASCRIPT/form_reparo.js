@@ -76,7 +76,7 @@ function inserirTexto() {
     texto += "PING AMAZON -	 " + document.getElementById("ping-amazon_print").innerText + "\n";
     texto += "PPING FACEBOOK - " + document.getElementById("ping-facebook_print").innerText + "\n";
     texto += "PING LOCAL -   " + document.getElementById("ping-local_print").innerText + "\n";
-    texto += "QUAL DISPOSITIVO : " + document.getElementById("outroDispositivo_print").innerText + "\n\n";
+    texto += "QUAL DISPOSITIVO : " + document.getElementById("outroDispositivo_print").innerText + "\n\n\n";
     texto += "CONCLUSAO :" + document.getElementById("conclusao_print").innerText + "\n\n";
     texto += "PONTOS DE REFERÊNCIA:" + document.getElementById("endereco_print").innerText + "\n";
     texto += "CONTATOS DO CLIENTE:" + document.getElementById("contato_print").innerText + "\n";
