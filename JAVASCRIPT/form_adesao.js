@@ -58,16 +58,17 @@ function inserirTexto() {
     document.getElementById("adesao__preview").value = texto;
 }
 
-//BOTÃO DE COPIA DECLARAÇÃO 
 var copiar = document.getElementById("copiador")
 //Pegando evento 
 copiar.addEventListener("click", copiarTexto);
 
 function copiarTexto() {
-    let textoCopiado = document.getElementById("adesao__preview");
-    textoCopiado.select();
-    textoCopiado.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-    alert("Control + V Efetuado : \n" + textoCopiado.value);
+    let textoCopiado = document.getElementById("reparo__preview").value;
+    navigator.clipboard.writeText(textoCopiado).then(() => {
+        alert("Texto copiado com sucesso: \n" + textoCopiado);
+    }).catch((error) => {
+        console.error("Falha ao copiar o texto: ", error);
+    });
 }
+
 

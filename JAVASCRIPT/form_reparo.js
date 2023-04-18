@@ -59,25 +59,25 @@ botao.addEventListener("click", inserirTexto);
 
 function inserirTexto() {
     var texto = "";
-    texto += "PROBLEMA: " + document.getElementById("problema_print").innerText + "\n";
+    texto += "PROBLEMA: " + document.getElementById("problema_print").innerText + "\n\n";
     texto += "ACESSO: " + document.getElementById("acesso_print").innerText + "\n";
-    texto += "RESET DE ONU:" + document.getElementById("resetOnu_print").innerText + "\n";
+    texto += "RESET DE ONU:" + document.getElementById("resetOnu_print").innerText + "\n\n";
     texto += "VERIFICADO ALARME DO U2000: " + document.getElementById("alarme_print").innerText + "\n";
-    texto += "SINAL OTICO'" + document.getElementById("sinalOtico_print").innerText + "\n";
+    texto += "SINAL OTICO'" + document.getElementById("sinalOtico_print").innerText + "\n\n";
     texto += "CTO" + document.getElementById("cto_print").innerText + "\n";
     texto += "PORTA" + document.getElementById("porta_print").innerText + "\n";
     texto += "SSID" + document.getElementById("ssid_print").innerText + "\n";
-    texto += "SENHA" + document.getElementById("senha_print").innerText + "\n";
-    texto += "WIFI SIGNAL DBm: " + document.getElementById("dbmsinal_print").innerText + "\n";
+    texto += "SENHA" + document.getElementById("senha_print").innerText + "\n\n";
+    texto += "WIFI SIGNAL DBm: " + document.getElementById("dbmsinal_print").innerText + "\n\n";
     texto += "TROCA DE FREQUÊNCIA:" + document.getElementById("trocaFrequencia_print").innerText + "\n";
-    texto += "TESTE REALIZADOS:" + document.getElementById("testesRealizados_print").innerText + "\n";
+    texto += "TESTE REALIZADOS:" + document.getElementById("testesRealizados_print").innerText + "\n\n";
     texto += "PING CORE 1  - " + document.getElementById("ping-core1_print").innerText + "\n";
     texto += "PING CORE 2  - " + document.getElementById("ping-core2_print").innerText + "\n";
     texto += "PING AMAZON -	 " + document.getElementById("ping-amazon_print").innerText + "\n";
     texto += "PPING FACEBOOK - " + document.getElementById("ping-facebook_print").innerText + "\n";
     texto += "PING LOCAL -   " + document.getElementById("ping-local_print").innerText + "\n";
-    texto += "QUAL DISPOSITIVO : " + document.getElementById("outroDispositivo_print").innerText + "\n";
-    texto += "CONCLUSAO :" + document.getElementById("conclusao_print").innerText + "\n";
+    texto += "QUAL DISPOSITIVO : " + document.getElementById("outroDispositivo_print").innerText + "\n\n";
+    texto += "CONCLUSAO :" + document.getElementById("conclusao_print").innerText + "\n\n";
     texto += "PONTOS DE REFERÊNCIA:" + document.getElementById("endereco_print").innerText + "\n";
     texto += "CONTATOS DO CLIENTE:" + document.getElementById("contato_print").innerText + "\n";
     texto += "CONTATOS(2) DO CLIENTE: " + document.getElementById("contato2_print").innerText + "\n";
@@ -94,10 +94,11 @@ var copiar = document.getElementById("copiador")
 copiar.addEventListener("click", copiarTexto);
 
 function copiarTexto() {
-    let textoCopiado = document.getElementById("reparo__preview");
-    textoCopiado.select();
-    textoCopiado.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-    alert("Control + c Efetuado : \n" + textoCopiado.value);
+    let textoCopiado = document.getElementById("reparo__preview").value;
+    navigator.clipboard.writeText(textoCopiado).then(() => {
+        alert("Texto copiado com sucesso: \n" + textoCopiado);
+    }).catch((error) => {
+        console.error("Falha ao copiar o texto: ", error);
+    });
 }
 
