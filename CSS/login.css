@@ -1,0 +1,187 @@
+
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(99,211,145,1) 0%, rgba(221,221,221,1) 100%);    
+    animation: background-dark-to-light 0.4s ease-in;
+}
+
+.login__form{
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    padding:2em 4em;
+    border-radius: 1em;
+    gap:2em;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+    animation: dark-to-light 0.4s ease-in-out;
+}
+
+.login__form .form__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login__form .form__header h1{
+    font-size: 40px;
+    position: relative;
+    
+}
+
+.login__form .form__header h1::before{
+    position: absolute;
+    content: '';
+    width: 40%;
+    background-color: var(--verde);
+    height: 3px;
+    bottom: 4px;
+}
+
+.login__form .input__box input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5em;
+    float: right;
+}
+.login__form .input__box label{
+font-size: 14px;
+color: var(--verde);
+}
+
+.login__form .input__field{
+display: flex;
+align-items: center;
+justify-content:center ;
+gap:15px;
+cursor:text;
+border-bottom: 1px solid var(--verde);
+}
+.login__form .input__field i{
+    font-size: 1.5em;
+    color: var(--dark);
+    padding:0.2em;
+}
+.login__form .input__field input{
+    border: none;
+    background-color: transparent;
+    width: 250px;
+    font-size: 1em;
+    padding: 0px 5px;
+
+}
+
+.login__form .input__field input:focus{
+    outline: none;
+}
+
+.forgot__password{
+    text-decoration: none;
+    font-size: 0.8em;
+    padding:0.3em;
+    color: var(--dark-verde);
+}
+.forgot__password:hover{
+    
+    color: var(--verde);
+}
+
+#mode__icon{
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.container #login__button{
+    border:none;
+    border-radius: 1em;
+    color: var(--branco);
+    background-color: var(--verde);
+    width: 100%;
+    padding:0.3em ;
+    font-size: 2em;
+}
+
+.container #login__button:hover{
+transform: scale(1.05);
+opacity: 70%;
+}
+
+
+.dark#login__form{
+    background-color: var(--dark);
+    color: var(--branco);
+    animation: light-to-dark 0.4s ease-in-out;
+}
+
+.dark#container{
+    background: linear-gradient(90deg, rgba(99,211,145,1) 0%, rgba(0,0,0,1) 100%);
+    animation: background-dark-to-light 0.5s ease-out;
+}
+
+#user__icon{
+    color: var(--dark);
+}
+
+.dark#user__icon{
+color: var(--verde);
+}
+
+#password__icon{
+    color: var(--dark);
+}
+
+.dark#password__icon{
+    color: var(--verde);
+}
+
+
+
+.darkinput__field i{
+    color: var(--branco);
+}
+
+@keyframes dark-to-light {
+    0%{
+        background-color: var(--dark);
+    }
+    100%{
+        background-color: var(--branco);
+    }
+}
+
+@keyframes light-to-dark {
+    100%{
+        background-color: var(--dark);
+    }
+    0%{
+        background-color: var(--branco);
+    }
+}
+
+@keyframes background-dark-to-light{
+    100%{
+        background: linear-gradient(90deg, rgba(99,211,145,1) 0%, rgba(221,221,221,1) 100%);
+    }
+    0%{
+        background: linear-gradient(90deg, rgba(99,211,145,1) 0%, rgba(0,0,0,1) 100%);
+
+    }
+}
+
+
+@keyframes backgroud-light-to-dark{
+    0%{
+        background: linear-gradient(90deg, rgba(99,211,145,1) 0%, rgba(221,221,221,1) 100%);
+    }
+    100%{
+        background: linear-gradient(90deg, rgba(99,211,145,1) 0%, rgba(0,0,0,1) 100%);
+
+    }
+}
