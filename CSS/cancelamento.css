@@ -1,0 +1,57 @@
+.container .canc__form{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4,1fr);
+    gap:1em;
+    
+}
+.container .canc__form .canc__motivo {
+    grid-column: span 4 ;
+    display: flex;
+    justify-content:start;
+    align-items: start;
+    flex-direction: column;
+    
+}
+
+.container .canc__form .canc__motivo input {
+   width: 100%;
+   border-radius: 2em
+}
+
+
+.container .canc__form label{
+    display: block;
+    color: var(--verde);
+    font-weight: bolder;
+    
+}
+
+
+.container .canc__form input,select{
+    display: flex;
+    width: 80%;
+    margin:0.5%;
+    padding: 2%;
+    padding-right:1em;
+    border-radius: 1em;
+    border: 0.5px solid var(--azul);
+    outline: none;
+
+}
+.container .canc__form .endereco {
+    grid-column: span 4 ;
+    display: flex;
+    justify-content:start;
+    align-items: start;
+    flex-direction: column;
+}
+.container .canc__form .endereco textarea {
+    width: 100%;
+    border-radius: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin:0.5%;
+    text-align:justify;
+    padding: 2%;
+    }

@@ -8,6 +8,7 @@
     width: 100%;
     background: linear-gradient(90deg, rgba(99,211,145,1) 0%, rgba(221,221,221,1) 100%);    
     animation: background-dark-to-light 0.4s ease-in;
+    transition: 1S;
 }
 
 .login__form{
@@ -78,6 +79,11 @@ border-bottom: 1px solid var(--verde);
 
 }
 
+
+
+
+
+
 .login__form .input__field input:focus{
     outline: none;
 }
@@ -109,8 +115,14 @@ border-bottom: 1px solid var(--verde);
 }
 
 .container #login__button:hover{
-transform: scale(1.05);
+transform: scale(1.15) ;
+transition: 1s;
 opacity: 70%;
+}
+
+#mode__icon:hover{
+    transform: scale(1.30) ;
+    transition: 0.5s;
 }
 
 

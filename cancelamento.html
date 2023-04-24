@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/cancelamento.css">
+    <title>O.s Generator Alfa</title>
+</head>
+
+<body id="body__form">
+    <header class="container__tittle">
+        <div class="tittle__principal">
+            <h1 id="titulo__principalh1">Gerador de O.s Alfa</h1>
+
+        </div>
+       
+        <div class="menu__container">
+            <div class="dark__mode">
+                <i class="fa-solid fa-toggle-off" id="mode__icon" "></i>
+            </div>
+            <nav class="menu__navegacao">
+                
+                <ul class="menu__lista">
+                    <li class="menu__links">
+                        <a class="menu__link">Adesão</a>
+                    </li>
+                    <li class="menu__links">
+                        <a href="reparo.html" class="menu__link">Suporte</a>
+                    </li>
+                    <li class="menu__links">
+                        <a  href="mudança_endereço.html" class="menu__link">Mud/Endereço</a>
+                    </li>
+                    <li class="menu__links">
+                        <a  href="cancelamento.html" class="menu__selected">Cancelamento</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <fieldset>
+            <form class="canc__form">
+
+                <div class="canc__motivo">
+                    <label for="motivo">Motivo Cancelamento</label>
+                    <input type="text" name="motivo" id="motivo" ></input>
+                </div>
+                <div class="canc__onu">
+                    
+                    <div class="canc__ssid">
+                        <label for="ssid">SSID</label>
+                        <input type="text" id="ssid" class="form__input">
+                    </div>
+                    <div class="canc__senha">
+                        <label for="senha">Senha</label>
+                        <input type="text" id="senha" class="form__input">
+                    </div>
+    
+                    <div class="canc__cto">
+                        <label for="cto">Cto</label>
+                        <input type="text" id="cto" class="form__input">
+                    </div>
+                    <div class="canc__porta">
+                        <label for="porta">Porta</label>
+                        <input type="text" id="porta" for="porta" class="form__input">
+                    </div>
+                </div>
+
+
+                
+                <div>
+                <div class="canc__fatura_aberto">
+                    <label for="fatura_aberto">Fatura em Aberto</label>
+                    <select id="fatura_aberto" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option value="(   ) Sim ( X ) Não">Não</option>
+                        <option value="( X ) Sim (   ) Não">Sim</option>
+                    </select>
+                </div>
+
+
+
+                <div class="canc__proporcional">
+                    <label for="proporcional">Proporcional de Uso </label>
+                    <select id="proporcional">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="(   ) Sim ( X ) Não">Não</option>
+                        <option value="( X ) Sim (   ) Não">Sim</option>
+                    </select>
+                </div>
+                </div class="agendamentos">
+                <div class="canc__agendamento">
+                    <label for="date"><strong>Data de Agendamento</strong></label>
+                    <input type="date" id="agendamento"></input>
+
+                    <div class="canc__antecipar">
+                        <label for="antecipar">Deseja Antecipar</label>
+                        <select id="antecipar">
+                            <option selected disabled value="">Selecione</option>
+                            <option value="(   ) Sim ( X ) Não">Não</option>
+                            <option value="( X ) Sim (   ) Não">Sim</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="contatos">
+                <div class="canc__contato">
+                    <label for="contato">Contato</label>
+                    <input type="tel" name="contato" id="contato" placeholder=" (21)12345-6789">
+
+                </div>
+
+                <div class="canc__contato2">
+                    <label for="contato2">Contato(2)</label>
+                    <input type="tel" name="contato2" id="contato2" placeholder=" (21)12345-6789">
+                </div>
+                </div>
+
+
+                <div class="endereco">
+                    <label>Endereço e Ponto de referência</label>
+                    <textarea rows="1" type="text" class="textarea" id="endereco"></textarea><br>
+                </div>
+                
+            </form>
+
+            <div class="canc__botao">
+                <button id="botao" class="botao__criar">
+                    Criar
+                    <i class="fa-sharp fa-solid fa-plus" style="color: #ffffff;"></i>
+                </button>
+                </div>
+                
+
+
+        </fieldset>
+
+        <fieldset id="mascara">
+
+            <div class="print">
+
+                <p>MOTIVO DO CONCELAMENTO:<span id="motivo__print"></span> </p>
+                <p>SENHA:<span id="senha__print"></span> </p>
+                <p>CTO:<span id="cto__print"></span> </p>
+                <p>PORTA:<span id="porta__print"></span></p>
+                <p>CLIENTE CIENTE DA FATURA EM ABERTO :<span id="fatura_aberto__print"></span></p>
+                <p>CIENTE QUE EXISTE PROPORCIONAL DE USO, DEVIDO CANCELAMENTO APÓS O VENCIMENTO :<span id="proporcional_print"></span></p>
+                <p>PONTOS DE REFERÊNCIA:<span id="referencia_print"></span><br></p>
+                <p>CONTATOS DO CLIENTE:<span id="contato_print"></span> <br>
+                <p>CONTATOS(2) DO CLIENTE:<span id="contato2_print"></span> <br>
+                <p>DATA DO AGENDAMENTO:<span id="agendamento_print"></span> <br>
+                <p>DESEJA OU NÃO ANTECIPAR:<span id="antecipar_print"></span></p>
+            </div>
+            <div class="container__preview">
+                <textarea id="canc__preview" rows="10" disabled></textarea>
+            </div>
+            <button id="copiador" class="botao__finalizar">
+                Finalizar
+                <i class="fa-regular fa-copy" style="color: #ffffff;"></i>
+            </button>
+        </fieldset>
+       
+    </div>
+
+
+    <script src="JAVASCRIPT/main.js"></script>
+    <script src="JAVASCRIPT/form_cancelamento.js"></script>
+</body>
+</html>

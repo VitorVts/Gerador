@@ -89,6 +89,22 @@ a{
     
 }
 
+
+.container fieldset{
+    margin:5%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: 0.5px 0.5px 1px 0.85px var(--verde), 1px 4px 10px #000;
+    border: none;
+    border-radius: 3em;
+    padding: 2em;
+
+}
+
+
+
+
 .container .container__preview textarea{
     width: 100%;
     border: none;
