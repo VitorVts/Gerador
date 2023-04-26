@@ -63,7 +63,7 @@ var copiar = document.getElementById("copiador")
 copiar.addEventListener("click", copiarTexto);
 
 function copiarTexto() {
-    let textoCopiado = document.getElementById("reparo__preview").value;
+    let textoCopiado = document.getElementById("adesao__preview").value;
     navigator.clipboard.writeText(textoCopiado).then(() => {
         alert("Texto copiado com sucesso: \n" + textoCopiado);
     }).catch((error) => {

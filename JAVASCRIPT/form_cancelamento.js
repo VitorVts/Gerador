@@ -6,6 +6,7 @@ os.addEventListener('click', function () {
     const printElements = [
         //adesão
         { printElementId: 'motivo__print', inputElementId: 'motivo' },
+        { printElementId: 'ssid__print', inputElementId: 'ssid' },
         { printElementId: 'senha__print', inputElementId: 'senha' },
         { printElementId: 'cto__print', inputElementId: 'cto' },
         { printElementId: 'porta__print', inputElementId: 'porta' },
@@ -51,9 +52,9 @@ function inserirTexto() {
     texto += "MOTIVO DO CONCELAMENTO:" + document.getElementById("motivo__print").innerText + "\n";
     texto += "SENHA:" + document.getElementById("senha__print").innerText + "\n\n";
     texto += "CTO:" + document.getElementById("cto__print").innerText + "\n";
-    texto += "PORTA:" + document.getElementById("porta__print").innerText + "\n\n";
-    texto += "CLIENTE CIENTE DA FATURA EM ABERTO : " + document.getElementById("fatura_aberto__print").innerText + "\n";
-    texto += "CIENTE QUE EXISTE PROPORCIONAL DE USO, DEVIDO CANCELAMENTO APÓS O VENCIMENTO :" + document.getElementById("proporcional_print").innerText + "\n";
+    texto += "PORTA:" + document.getElementById("porta__print").innerText + "\n\n\n";
+    texto += "CLIENTE CIENTE DA FATURA EM ABERTO : " + document.getElementById("fatura_aberto__print").innerText + "\n\n";
+    texto += "CIENTE QUE EXISTE PROPORCIONAL DE USO, DEVIDO CANCELAMENTO APÓS O VENCIMENTO :" + document.getElementById("proporcional_print").innerText + "\n\n\n";
     texto += "PONTOS DE REFERÊNCIA:" + document.getElementById("endereco_print").innerText + "\n";
     texto += "CONTATOS DO CLIENTE: " + document.getElementById("contato_print").innerText + "\n";
     texto += "CONTATOS(2) DO CLIENTE:" + document.getElementById("contato2_print").innerText + "\n";

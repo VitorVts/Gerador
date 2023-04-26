@@ -52,7 +52,7 @@ function inserirTexto() {
     texto += "SSID: " + document.getElementById("mud__ssid__print").innerText + "\n";
     texto += "SENHA: " + document.getElementById("mud__senha__print").innerText + "\n";
     texto += "CTO:" + document.getElementById("mud__cto__print").innerText + "\n";
-    texto += "PORTA: " + document.getElementById("mud__porta__print").innerText + "\n";
+    texto += "PORTA: " + document.getElementById("mud__porta__print").innerText + "\n\n";
     texto += "ENDEREÇO ANTIGO: " + document.getElementById("mud__endereco__antigo__print").innerText + "\n";
     texto += "PONTOS DE REFERÊNCIA:" + document.getElementById("ref__antigo__print").innerText + "\n\n";
     texto += "NOVO ENDEREÇO: " + document.getElementById("mud__endereco__novo__print").innerText + "\n";

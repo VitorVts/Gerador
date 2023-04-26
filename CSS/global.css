@@ -21,7 +21,10 @@
     color: #ddd;
 }
 
-
+textarea{
+    outline: none;
+    font-size: large;
+}
 
 p{
     display: none;
@@ -142,7 +145,6 @@ input,select,button{
     cursor: pointer;
 
 }
-
 
 
 
